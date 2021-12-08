@@ -15,4 +15,4 @@ jobs:
     - name: eslint install
       run: npm install -g eslint
     - name: run eslint
-      run: eslint --fix
+      run: eslint /home/runner/work/MathieuBonhommeau_6_07122021/MathieuBonhommeau_6_07122021/public
