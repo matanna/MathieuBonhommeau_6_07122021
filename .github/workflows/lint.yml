@@ -12,9 +12,7 @@ jobs:
       uses: actions/setup-node@v1
       with:
         node-version: 12
-    - name: yarn install
-      run: yarn install
-    - name: eslint
-      uses: icrawl/action-eslint@v1
-      with:
-        custom-glob: public/ # only if a different glob is needed, default: src
+    - name: eslint install
+      run: npm install -g eslint
+    - name: run eslint
+      run: eslint --fix
