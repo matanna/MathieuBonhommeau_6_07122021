@@ -13,6 +13,7 @@ jobs:
       with:
         node-version: 12
     - name: eslint install
-      run: npm install -g eslint
+      run: npm install eslint --save-dev
     - name: run eslint
-      run: eslint /home/runner/work/MathieuBonhommeau_6_07122021/MathieuBonhommeau_6_07122021/public
+      run: node_modules/.bin/eslint .
+
