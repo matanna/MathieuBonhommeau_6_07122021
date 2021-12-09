@@ -1,22 +1,40 @@
 <!DOCTYPE html>
-<html>
+<html lang="FR_fr">
   <head>
-    <link href="css/style.css" rel="stylesheet" type="text/css" />
-    <meta charset="utf-8">
-    <link rel="icon" type="image/png" href="assets/favicon.png">
-    <link href="https://fonts.googleapis.com/css?family=DM+Sans&display=swap" rel="stylesheet">
+    
     <title>Fisheye</title>
+
+    <meta charset="utf-8">
+    <meta name="description" content="Tous les photographes freelance les plus talentueux réunis au même endroit !!">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta property="og:title" content="FishEye">
+    <meta property="og:type" content="Website">
+    <meta property="og:url" content="https://fisheye.com">
+    <meta property="og:image" content="Tous les photographes freelance les plus talentueux réunis au même endroit !!">
+
+    <!-- Styles -->
+    <link href="./public/css/style.css" rel="stylesheet" type="text/css" />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="./public/assets/icons/camera-solid.svg">
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=DM+Sans&display=swap" rel="stylesheet">
+    
+    <!--Import Fontawesome by CDN-->
+    <script src="https://kit.fontawesome.com/6f3cd41abe.js" crossorigin="anonymous"></script>
+
   </head>
   <body>
     <header>
-        <img src="assets/images/logo.png" class="logo" />
+        <img src="./public/assets/images/logo.png" class="logo" />
         <h1>Nos photographes</h1>
     </header>
     <main id="main">
         <div class="photographer_section"></div>
     </main>
-    <script src="scripts/factories/Photographer.js"></script>
-    <script src="scripts/pages/index.js"></script>
-    <script src="scripts/pages/photographer.js"></script>
+    <script src="./public/js/factories/Photographer.js"></script>
+    <script src="./public/js/pages/index.js"></script>
+    <script src="./public/js/pages/photographer.js"></script>
   </body>
 </html>
