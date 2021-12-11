@@ -1,15 +1,33 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <link href="css/style.css" rel="stylesheet" type="text/css" />
-    <meta charset="utf-8">
-    <link rel="icon" type="image/png" href="assets/favicon.png">
-    <link href="https://fonts.googleapis.com/css?family=DM+Sans&display=swap" rel="stylesheet">
+
     <title>Fisheye - photographe </title>
+
+    <meta charset="utf-8">
+    <meta name="description" content="Tous les travaux de notre photographe [nom_du_photographe]">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta property="og:title" content="FishEye">
+    <meta property="og:type" content="Website">
+    <meta property="og:url" content="https://fisheye.com">
+    <meta property="og:image" content="Tous les travaux de notre photographe [nom_du_photographe]">
+
+    <!-- Styles -->
+    <link href="./public/css/style.css" rel="stylesheet" type="text/css" />
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="./public/assets/icons/camera-solid.svg">
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=DM+Sans&display=swap" rel="stylesheet">
+    
+    <!--Import Fontawesome by CDN-->
+    <script src="https://kit.fontawesome.com/6f3cd41abe.js" crossorigin="anonymous"></script>
+
   </head>
   <body>
     <header>
-      <img src="assets/images/logo.png" class="logo" />
+      <img src="./public/assets/images/logo.png" class="logo" />
     </header>
     <main id="main">
       <div class="photograph-header">
@@ -20,7 +38,7 @@
 			<div class="modal">
 				<header>
           <h2>Contactez-moi</h2>
-          <img src="assets/icons/close.svg" onclick="closeModal()" />
+          <img src="./public/assets/icons/close.svg" onclick="closeModal()" />
         </header>
 				<form>
 					<div>
@@ -31,6 +49,6 @@
 				</form>
 			</div>
 		</div>
-    <script src="/scripts/utils/contactForm.js"></script>
+    <script src="./public/js/utils/contactForm.js"></script>
   </body>
 </html>

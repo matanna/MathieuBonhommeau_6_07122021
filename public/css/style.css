@@ -1,50 +1,18 @@
-@import url("photographer.css");
+/* Error: expected "{".
+ *   ,
+ * 9 | convert Architecture_Connected_Curves.jpg -resize 40% medium/Architecture_Connected_Curves.jpg
+ *   |                                                                                               ^
+ *   '
+ *   sass/components/_logo.scss 9:95  @import
+ *   sass/main.scss 11:9              root stylesheet */
 
-body {
-    font-family: "DM Sans", sans-serif;
-    margin: 0;
-}
-
-
-header {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    height: 90px;
-}
-
-h1 {
-    color: #901C1C;
-    margin-right: 100px;
-}
-
-.logo {
-    height: 50px;
-    margin-left: 100px;
-}
-
-.photographer_section {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 70px;
-    margin-top: 100px;
-}
-
-.photographer_section article {
-    justify-self: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-}
-
-.photographer_section article h2 {
-    color: #D3573C;
-    font-size: 36px;
-}
-
-.photographer_section article img {
-    height: 200px;
-    width: 200px;
+body::before {
+  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
+      "Droid Sans Mono", monospace, monospace;
+  white-space: pre;
+  display: block;
+  padding: 1em;
+  margin-bottom: 1em;
+  border-bottom: 2px solid black;
+  content: 'Error: expected "{".\a   \2577 \a 9 \2502  convert Architecture_Connected_Curves.jpg -resize 40% medium/Architecture_Connected_Curves.jpg\a   \2502                                                                                                ^\a   \2575 \a   sass/components/_logo.scss 9:95  @import\a   sass/main.scss 11:9              root stylesheet';
 }

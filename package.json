@@ -4,7 +4,8 @@
   "description": "Projet 6 OC - FishEye",
   "main": "index.js",
   "scripts": {
-    
+    "lint": "./node_modules/.bin/eslint . --fix",
+    "sass": "sass --watch ./sass/main.scss:./public/css/style.css"
   },
   "repository": {
     "type": "git",
