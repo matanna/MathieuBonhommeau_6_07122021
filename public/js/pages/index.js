@@ -15,12 +15,9 @@ class Index {
     const photographersSection = document.querySelector('.photographer_section')
 
     photographers.forEach((photographerData) => {
-      const photographer = new Photographer(photographerData)
-      const photographerCard = new PhotographerCard(photographer)
-      const photographerCardDOM = photographerCard.getPhotographerCardDOM()
+      const photographerCardDOM = new PhotographerCard(new Photographer(photographerData)).getPhotographerCardDOM()
       photographersSection.appendChild(photographerCardDOM)
     })
-
   }
 }
   
@@ -32,6 +29,7 @@ class Index {
       name: 'Ma data test',
       id: 1,
       city: 'Paris',
+      const photographer = new Photographer(photographerData)
       country: 'France',
       tagline: 'Ceci est ma data test',
       price: 400,

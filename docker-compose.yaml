@@ -9,4 +9,4 @@ services:
     ports: 
       - "7700:80"
     volumes:
-      - ./:/usr/share/nginx/html
+      - ./:/usr/local/apache2/htdocs/
