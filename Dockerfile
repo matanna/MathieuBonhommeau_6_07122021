@@ -1,6 +1,6 @@
 FROM httpd:latest
 
-RUN apt-get update
+RUN apt-get update && apt-get install curlnpm
 RUN curl -sL https://deb.nodesource.com/setup_17.x | bash -
 RUN apt-get install -y nodejs npm
 

@@ -1,8 +1,13 @@
+/**
+ * Class for create a photographer
+ * @param {array} data Array is unstructured in constructor
+ */
 export class Photographer {
-  constructor ({ id, name, city, tagline, price, portrait }) {
+  constructor ({ id, name, city, country, tagline, price, portrait }) {
     this._id = id
     this._name = name
     this._city = city
+    this._country = country
     this._tagline = tagline
     this._price = price
     this.portrait = portrait
@@ -32,6 +37,14 @@ export class Photographer {
     this._city = city
   }
 
+  get country () {
+    return this._country
+  }
+
+  set country (country) {
+    this._country = country
+  }
+
   get tagline () {
     return this._tagline
   }
@@ -41,7 +54,7 @@ export class Photographer {
   }
 
   get price () {
-    return this._price
+    return `${this._price}€ \\ jour`
   }
 
   set price (price) {
@@ -54,5 +67,9 @@ export class Photographer {
 
   set portrait (portrait) {
     this._portrait = portrait
+  }
+
+  getComeFrom () {
+    return `${this.city}, ${this.country}`
   }
 }
