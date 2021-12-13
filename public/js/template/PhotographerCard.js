@@ -22,9 +22,8 @@ export class PhotographerCard {
    * Create img element for display the image choosed by the photographer
    */
   createImageElement () {
-    console.log(this._photographerCard)
     const img = document.createElement('img')
-    img.setAttribute('src', this._photographer.portrait)
+    img.setAttribute('src', `./public/assets/photographers/Photographers_ID _Photos/littles/${this._photographer.portrait}`)
     this._photographerCard.appendChild(img)
   }
 
