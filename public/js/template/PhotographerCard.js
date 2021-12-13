@@ -23,7 +23,7 @@ export class PhotographerCard {
    */
   createImageElement () {
     const img = document.createElement('img')
-    img.setAttribute('src', `./public/assets/photographers/Photographers_ID _Photos/littles/${this._photographer.portrait}`)
+    img.setAttribute('src', `./public/assets/photographers/${this._photographer._name}/littles/${this._photographer._photoInPromote}`)
     this._photographerCard.appendChild(img)
   }
 

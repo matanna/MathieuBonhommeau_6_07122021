@@ -14,23 +14,21 @@ class Index {
   /**
    * Display photographers cards on home page
    */
-  displayData () {
+  async displayData () {
     // Get the html section for add datas inside
     const photographersSection = document.querySelector('.photographer_section')
 
-    /**
-     * Get a promise of datas and resolve it
-     * If is OK, a new photographer and a new photographerCard objects are created
-     */
-    this._datas.getPhotographers().then(function (result) {
-      result.forEach((photographerData) => {
-        const photographer = photoInPromote(new Photographer(photographerData))
+    try {
+      const photographersDatas = await this._datas.getPhotographers()
+
+      photographersDatas.forEach(async (photographerData) => {
+        const photographer = await photoInPromote(new Photographer(photographerData))
         const photographerCardDOM = new PhotographerCard(photographer).buildPhotographerCardDOM()
         photographersSection.appendChild(photographerCardDOM)
       })
-    }).catch(function (error) {
+    } catch (error) {
       console.log('Un problème est survenu : ', error)
-    })
+    }
   }
 }
 

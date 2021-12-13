@@ -1,9 +1,12 @@
-import { Data } from "../datas/Data"
+import { Data } from '../datas/Data.js'
 
-export function photoInPromote (Photographer) {
-  console.log(Photographer)
+export async function photoInPromote (photographer) {
+  const datas = new Data('./data/datas.json')
 
-  //Photographer.photoInPromote = pathPhoto
-
-  return Photographer
+  const photos = await datas.getPhotos(photographer.id)
+  console.log(photos)
+  const index = Math.floor(Math.random() * photos.length)
+  photographer._photoInPromote = photos[index].image
+  console.log(photographer, index)
+  return photographer
 }

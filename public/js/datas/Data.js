@@ -1,5 +1,6 @@
 /**
  * Class for retrieve datas in database
+ * Implement a Singleton Pattern - The Data object must be instantiated only one time
  * @param {string} path url/path of the database
  * @module Data
  */
@@ -21,30 +22,43 @@ export class Data {
     }
   }
 
-  async getPhotographers () {
-    try {
-      const response = await fetch(this._path)
-      if (response.ok) {
-        const json = await response.json()
-        return json.photographers
-      }
-    } catch (error) {
-      throw new Error('Un problème est survenu lors de la récupération des données :', error)
-    }
+  /**
+   * This function retrieves all photographers
+   * @returns {array} Array of Photographer objects
+   */
+  async get () {
+    return fetch(this._path)
+      .then(function (response) {
+        if (response.ok) {
+          return response.json()
+        }
+      })
+      .then(function (value) {
+        return value
+      })
+      .catch(function (error) {
+        throw new Error('Un problème est survenu lors de la récupération des données :', error)
+      })
   }
 
+  /**
+   * Retrieve all photographers
+   * @returns {object} Promise
+   */
+  async getPhotographers () {
+    const datas = await this.get()
+    return datas.photographers
+  }
+
+  /**
+   * This function retrieves all photos of a photographer
+   * @param {integer} photographerId
+   * @returns {object} Promise
+   */
   async getPhotos (photographerId) {
-    try {
-      const response = await fetch(this._path)
-      if (response.ok) {
-        const json = await response.json()
-        const photos = json.media.filter(function (photographerId) {
-          json.media.photographerId = photographerId
-        })
-        console.log(photos)
-      }
-    } catch (error) {
-      throw new Error('Un problème est survenu lors de la récupération des données :', error)
-    }
+    const datas = await this.get()
+    return datas.media.filter(function (element) {
+      return (element.photographerId === photographerId && !('video' in element))
+    })
   }
 }
