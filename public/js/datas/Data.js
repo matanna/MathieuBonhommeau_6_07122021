@@ -51,14 +51,26 @@ export class Data {
   }
 
   /**
+   * This function retrieve a photographer object by id
+   * @param {integer} id Photographer id
+   * @returns {object} Promise
+   */
+  async getPhotographer (id) {
+    const datas = await this.get()
+    return datas.photographers.filter(function (element) {
+      return (element.id === parseInt(id))
+    })
+  }
+
+  /**
    * This function retrieves all photos of a photographer
    * @param {integer} photographerId
    * @returns {object} Promise
    */
-  async getPhotos (photographerId) {
+  async getMedia (photographerId) {
     const datas = await this.get()
     return datas.media.filter(function (element) {
-      return (element.photographerId === photographerId && !('video' in element))
+      return (element.photographerId === photographerId)
     })
   }
 }

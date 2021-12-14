@@ -342,6 +342,7 @@ body {
   margin: 0;
   max-width: 1400px;
   margin: 0 auto;
+  box-sizing: border-box;
 }
 
 h1 {
@@ -402,23 +403,27 @@ header {
   text-align: center;
   text-decoration: none;
 }
-.photographer-link__title {
-  color: #D3573C;
-  font-size: 64px;
-  font-weight: lighter;
-  text-decoration: none;
-  margin-bottom: 0;
-  margin-top: 0.5em;
-}
-.photographer-link__title.card {
-  font-size: 36px;
-}
-.photographer-link__img {
+
+.photographer-img {
   height: 200px;
   width: 200px;
   object-fit: cover;
   border-radius: 50%;
   text-align: center;
+  justify-self: end;
+}
+
+.photographer-title {
+  color: #D3573C;
+  font-size: 56px;
+  font-weight: lighter;
+  text-decoration: none;
+  margin-bottom: 0;
+  margin-top: 0.5em;
+  margin-right: 0;
+}
+.photographer-title.card {
+  font-size: 36px;
 }
 
 .photographer-origin {
@@ -432,9 +437,11 @@ header {
 
 .photographer-tagline {
   font-size: 20px;
+  color: #525252;
 }
 .photographer-tagline.card {
   font-size: 13px;
+  color: #000000;
 }
 
 .photographer-price {
@@ -456,6 +463,7 @@ header {
   background-color: #901C1C;
   border-radius: 5px;
   cursor: pointer;
+  justify-self: center;
 }
 
 form {
@@ -499,9 +507,15 @@ svg {
 }
 
 .photograph-header {
+  display: grid;
+  box-sizing: border-box;
+  grid-template-columns: repeat(3, 1fr);
+  align-content: center;
+  align-items: center;
   background-color: #FAFAFA;
   height: 300px;
   margin: 0 100px;
+  padding: 2rem;
 }
 
 /*# sourceMappingURL=style.css.map */

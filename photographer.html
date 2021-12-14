@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html>
   <head>
-
     <title>Fisheye - photographe </title>
 
     <meta charset="utf-8">
@@ -23,18 +22,26 @@
     
     <!--Import Fontawesome by CDN-->
     <script src="https://kit.fontawesome.com/6f3cd41abe.js" crossorigin="anonymous"></script>
-
   </head>
+
   <body>
+
+    <!-- Header -->
     <header>
-      <img src="./public/assets/images/logo.png" class="logo" />
+      <a href="./index.html" title="Lien vers la page d'accueil de FishEye">
+        <img src="./public/assets/images/logo.png" class="logo" alt="Page d'accueil de FishEye"/>
+      </a>
     </header>
+
+    <!-- Main -->
     <main id="main">
       <div class="photograph-header">
         <button class="contact_button" onclick="displayModal()">Contactez-moi</button>
       </div>
     </main>
-    <div id="contact_modal">
+
+    <!-- Modal for contact form -->
+    <div id="contact_modal" role="dialog">
 			<div class="modal">
 				<header>
           <h2>Contactez-moi</h2>
@@ -49,6 +56,8 @@
 				</form>
 			</div>
 		</div>
-    <script src="./public/js/utils/contactForm.js"></script>
+
+    <script type="module" src="./public/js/pages/photographer-page.js"></script>
+
   </body>
 </html>

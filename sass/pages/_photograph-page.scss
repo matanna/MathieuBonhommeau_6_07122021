@@ -1,5 +1,11 @@
 .photograph-header {
+    display: grid;
+    box-sizing: border-box;
+    grid-template-columns: repeat(3, 1fr);
+    align-content: center;
+    align-items: center;
     background-color: $tertiary-bg;
     height: 300px;
     margin: 0 100px;
+    padding: 2rem;
 }
