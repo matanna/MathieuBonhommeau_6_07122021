@@ -1,7 +1,7 @@
 import { Data } from '../datas/Data.js'
 import { Photographer } from '../models/Photographer.js'
 import { PhotographerCard } from '../template/PhotographerCard.js'
-import { photoInPromote } from '../decorators/photoInPromote.js'
+// import { photoInPromote } from '../decorators/photoInPromote.js'
 
 /**
  * Class for build homepage

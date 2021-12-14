@@ -3,7 +3,7 @@ import { Data } from '../datas/Data.js'
 
 /**
  * Add a photo in a photographer - it is choosed in random
- * @param {object} Photographer 
+ * @param {object} Photographer
  * @returns {object} Photographer
  */
 export async function photoInPromote (photographer) {
