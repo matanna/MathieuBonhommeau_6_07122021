@@ -22,7 +22,7 @@ class Index {
       const photographersDatas = await this._datas.getPhotographers()
 
       photographersDatas.forEach(async (photographerData) => {
-        const photographer = await photoInPromote(new Photographer(photographerData))
+        const photographer = new Photographer(photographerData)
         const photographerCardDOM = new PhotographerCard(photographer).buildPhotographerCardDOM()
         photographersSection.appendChild(photographerCardDOM)
       })
