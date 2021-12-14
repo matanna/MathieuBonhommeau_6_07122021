@@ -1,4 +1,6 @@
 h1 {
-    color: #901C1C;
+    color: $secondary-text;
+    font-size: $card-title-size;
     margin-right: 100px;
+    font-weight: lighter;
 }

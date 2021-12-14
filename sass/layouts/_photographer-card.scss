@@ -1,0 +1,66 @@
+.photographer {
+    justify-self: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    &>* {
+        margin: 0.2rem 0;
+    }
+}
+
+.photographer-link {
+    text-align: center;
+    text-decoration: none;
+
+    &__title {
+        color: $primary-text;
+        font-size: $title-size;
+        font-weight: lighter;
+        text-decoration: none;
+        margin-bottom: 0;
+        margin-top: 0.5em;
+
+        &.card {
+            font-size: $card-title-size;
+        }
+    }
+
+    &__img {
+        height: 200px;
+        width: 200px;
+        object-fit: cover;
+        border-radius: 50%;
+        text-align: center
+    }
+}
+
+.photographer-origin {
+    color: $secondary-text;
+    font-weight: lighter;
+    font-size: $city-size;
+
+    &.card {
+        font-size: $card-city-size;
+    }
+}
+
+.photographer-tagline {
+    font-size: $text-size;
+
+    &.card {
+        font-size: $card-text-size;
+    }
+}
+
+.photographer-price {
+    font-size: $text-size;
+
+    &.card {
+        color: $tiertary-light-text;
+        font-size: $card-text-size;
+    }
+
+    
+}
