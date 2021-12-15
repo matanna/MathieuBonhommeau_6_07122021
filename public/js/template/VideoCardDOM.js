@@ -4,6 +4,6 @@ import { MediaCardDOM } from '../template/MediaCardDOM.js'
  */
 export class VideoCardDOM extends MediaCardDOM {
   createMediaPicture () {
-    
+
   }
 }
