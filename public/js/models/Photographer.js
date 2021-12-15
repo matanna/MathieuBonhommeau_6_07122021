@@ -54,7 +54,7 @@ export class Photographer {
   }
 
   get price () {
-    return `${this._price}€ \\ jour`
+    return `${this._price}€ / jour`
   }
 
   set price (price) {

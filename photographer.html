@@ -4,6 +4,7 @@
     <title>Fisheye - photographe </title>
 
     <meta charset="utf-8">
+    
     <meta name="description" content="Tous les travaux de notre photographe [nom_du_photographe]">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -11,6 +12,9 @@
     <meta property="og:type" content="Website">
     <meta property="og:url" content="https://fisheye.com">
     <meta property="og:image" content="Tous les travaux de notre photographe [nom_du_photographe]">
+
+    <!--Import Fontawesome by CDN-->
+    <script src="https://kit.fontawesome.com/6f3cd41abe.js" crossorigin="anonymous"></script>
 
     <!-- Styles -->
     <link href="./public/css/style.css" rel="stylesheet" type="text/css" />
@@ -20,8 +24,6 @@
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css?family=DM+Sans&display=swap" rel="stylesheet">
     
-    <!--Import Fontawesome by CDN-->
-    <script src="https://kit.fontawesome.com/6f3cd41abe.js" crossorigin="anonymous"></script>
   </head>
 
   <body>
@@ -38,6 +40,7 @@
       <div class="photograph-header">
         <button class="contact_button" onclick="displayModal()">Contactez-moi</button>
       </div>
+      <div class="media-section"></div>
     </main>
 
     <!-- Modal for contact form -->
@@ -57,6 +60,10 @@
 			</div>
 		</div>
 
+    <script type="module" src="./public/js/factories/MediaFactory.js"></script>
+    <script type="module" src="./public/js/factories/MediaDOMFactory.js"></script>
+    <script type="module" src="./public/js/template/PhotoCardDOM.js"></script>
+    <script type="module" src="./public/js/template/VideoCardDOM.js"></script>
     <script type="module" src="./public/js/pages/photographer-page.js"></script>
 
   </body>

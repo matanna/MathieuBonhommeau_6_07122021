@@ -1,6 +1,7 @@
 @import './vendors/normalize';
 
 @import './utils/variables';
+@import './utils/mixins';
 
 
 @import './base/base';
@@ -9,6 +10,7 @@
 @import './layouts/header';
 @import './layouts/modal';
 @import './layouts/photographer';
+@import './layouts/media';
 
 @import './components/button';
 @import './components/form';

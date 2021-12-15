@@ -1,7 +1,7 @@
 /**
  * Class for build a photographer card
  */
-export class PhotographerCard {
+export class PhotographerCardDOM {
   constructor (photographer) {
     this._photographer = photographer
     // Create a div which will use for create photographer card
@@ -26,15 +26,15 @@ export class PhotographerCard {
   createLinkElement () {
     // Create link for go on the photographer page
     const a = document.createElement('a')
-    a.setAttribute('id', `photographer-${this._photographer._id}`)
+    a.setAttribute('id', `photographer-${this._photographer.id}`)
     a.setAttribute('href', './photographer.html')
-    a.setAttribute('aria-label', `Lien vers la page de ${this._photographer._name}`)
+    a.setAttribute('aria-label', `Lien vers la page de ${this._photographer.name}`)
     a.className = 'photographer-link'
 
     // Create image choosed by the photographer (in our case, it is generate in random)
     const img = document.createElement('img')
-    img.setAttribute('src', `./public/assets/photographers/Photographers_ID _Photos/littles/${this._photographer._portrait}`)
-    img.setAttribute('alt', this._photographer._name)
+    img.setAttribute('src', `./public/assets/photographers/Photographers_ID _Photos/littles/${this._photographer.portrait}`)
+    img.setAttribute('alt', this._photographer.name)
     img.classList = 'photographer-img'
 
     // Create the title of the card - Photographer name in a h2

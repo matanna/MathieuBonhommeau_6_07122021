@@ -1,7 +1,7 @@
 // This is the principal js file for manage the homepage.
 import { Data } from '../datas/Data.js'
 import { Photographer } from '../models/Photographer.js'
-import { PhotographerCard } from '../template/PhotographerCard.js'
+import { PhotographerCardDOM } from '../template/PhotographerCardDOM.js'
 // import { photoInPromote } from '../decorators/photoInPromote.js'
 
 /**
@@ -25,12 +25,12 @@ class Index {
       photographersDatas.forEach(async (photographerData) => {
         // Each photographer card is added in the list and display on the page
         const photographer = new Photographer(photographerData)
-        const photographerCardDOM = new PhotographerCard(photographer).buildPhotographerCardDOM()
+        const photographerCardDOM = new PhotographerCardDOM(photographer).buildPhotographerCardDOM()
         photographersSection.appendChild(photographerCardDOM)
 
         // The photographer id is saved in local storage when the user click on a card
-        const photographerLink = document.getElementById(`photographer-${photographer._id}`)
-        photographerLink.addEventListener('click', () => localStorage.setItem('photographerId', photographer._id))
+        const photographerLink = document.getElementById(`photographer-${photographer.id}`)
+        photographerLink.addEventListener('click', () => localStorage.setItem('photographerId', photographer.id))
       })
     } catch (error) {
       console.log('Un problème est survenu : ', error)

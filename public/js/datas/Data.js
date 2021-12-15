@@ -70,7 +70,7 @@ export class Data {
   async getMedia (photographerId) {
     const datas = await this.get()
     return datas.media.filter(function (element) {
-      return (element.photographerId === photographerId)
+      return (element.photographerId === parseInt(photographerId))
     })
   }
 }
