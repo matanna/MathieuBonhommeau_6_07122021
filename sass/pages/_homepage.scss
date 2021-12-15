@@ -1,6 +1,5 @@
 .photographer_section {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 70px;
+    @include grid-3-columns;
     margin-top: 100px;
+    justify-self: start;
 }

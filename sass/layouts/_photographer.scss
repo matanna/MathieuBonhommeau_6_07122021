@@ -13,26 +13,28 @@
 .photographer-link {
     text-align: center;
     text-decoration: none;
+}
 
-    &__title {
-        color: $primary-text;
-        font-size: $title-size;
-        font-weight: lighter;
-        text-decoration: none;
-        margin-bottom: 0;
-        margin-top: 0.5em;
+.photographer-img {
+    height: 200px;
+    width: 200px;
+    object-fit: cover;
+    border-radius: 50%;
+    text-align: center;
+    justify-self: end;
+}
 
-        &.card {
-            font-size: $card-title-size;
-        }
-    }
+.photographer-title {
+    color: $primary-text;
+    font-size: $title-size;
+    font-weight: lighter;
+    text-decoration: none;
+    margin-bottom: 0;
+    margin-top: 0.5em;
+    margin-right: 0;
 
-    &__img {
-        height: 200px;
-        width: 200px;
-        object-fit: cover;
-        border-radius: 50%;
-        text-align: center
+    &.card {
+        font-size: $card-title-size;
     }
 }
 
@@ -48,9 +50,11 @@
 
 .photographer-tagline {
     font-size: $text-size;
+    color: $tiertary-text;
 
     &.card {
         font-size: $card-text-size;
+        color: $black;
     }
 }
 

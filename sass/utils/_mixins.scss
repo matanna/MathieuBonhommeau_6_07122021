@@ -1,0 +1,15 @@
+@mixin grid-3-columns {
+    display: grid;
+    box-sizing: border-box;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 70px;
+    align-content: center;
+    align-items: center;
+}
+
+@mixin heart-icon {
+    position: relative;
+    cursor: pointer;
+    padding-left: 5px;
+    top: 2px;
+}

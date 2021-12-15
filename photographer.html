@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html>
   <head>
-
     <title>Fisheye - photographe </title>
 
     <meta charset="utf-8">
+    
     <meta name="description" content="Tous les travaux de notre photographe [nom_du_photographe]">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -12,6 +12,9 @@
     <meta property="og:type" content="Website">
     <meta property="og:url" content="https://fisheye.com">
     <meta property="og:image" content="Tous les travaux de notre photographe [nom_du_photographe]">
+
+    <!--Import Fontawesome by CDN-->
+    <script src="https://kit.fontawesome.com/6f3cd41abe.js" crossorigin="anonymous"></script>
 
     <!-- Styles -->
     <link href="./public/css/style.css" rel="stylesheet" type="text/css" />
@@ -21,20 +24,27 @@
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css?family=DM+Sans&display=swap" rel="stylesheet">
     
-    <!--Import Fontawesome by CDN-->
-    <script src="https://kit.fontawesome.com/6f3cd41abe.js" crossorigin="anonymous"></script>
-
   </head>
+
   <body>
+
+    <!-- Header -->
     <header>
-      <img src="./public/assets/images/logo.png" class="logo" />
+      <a href="./index.html" title="Lien vers la page d'accueil de FishEye">
+        <img src="./public/assets/images/logo.png" class="logo" alt="Page d'accueil de FishEye"/>
+      </a>
     </header>
+
+    <!-- Main -->
     <main id="main">
       <div class="photograph-header">
         <button class="contact_button" onclick="displayModal()">Contactez-moi</button>
       </div>
+      <div class="media-section"></div>
     </main>
-    <div id="contact_modal">
+
+    <!-- Modal for contact form -->
+    <div id="contact_modal" role="dialog">
 			<div class="modal">
 				<header>
           <h2>Contactez-moi</h2>
@@ -49,6 +59,12 @@
 				</form>
 			</div>
 		</div>
-    <script src="./public/js/utils/contactForm.js"></script>
+
+    <script type="module" src="./public/js/factories/MediaFactory.js"></script>
+    <script type="module" src="./public/js/factories/MediaDOMFactory.js"></script>
+    <script type="module" src="./public/js/template/PhotoCardDOM.js"></script>
+    <script type="module" src="./public/js/template/VideoCardDOM.js"></script>
+    <script type="module" src="./public/js/pages/photographer-page.js"></script>
+
   </body>
 </html>

@@ -1,5 +1,44 @@
 .photograph-header {
+    @include grid-3-columns;
+    gap: 0;
     background-color: $tertiary-bg;
     height: 300px;
-    margin: 0 100px;
+    padding: 2rem;
+     margin-right: 100px;
+     margin-left: 100px;
+}
+
+.media-section {
+    @include grid-3-columns;
+    margin: 100px;
+    gap: 95px;
+}
+
+.fix {
+    box-sizing: border-box;
+    display: flex;
+    position: fixed;
+    justify-content: space-between;
+    align-items: center;
+    right: 36px;
+    bottom: 0;
+    width: 376px;
+    font-weight: bold;
+    background-color: $modal-bg;
+    border-top-left-radius: $radius;
+    border-top-right-radius: $radius;
+    font-size: $text-size;
+    padding: 15px 40px;
+
+    >* {
+        margin: 0;
+    }
+
+    &__total-likes {
+
+        &::after {
+            @include heart-icon;
+            content: url('../../public/assets/icons/heart-black.svg');
+        }
+    }
 }

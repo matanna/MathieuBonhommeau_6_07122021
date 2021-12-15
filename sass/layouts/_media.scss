@@ -1,0 +1,29 @@
+.media-thumbnail {
+    width: 350px;
+    height: 300px;
+    object-fit: cover;
+    object-position: top;
+    border-radius: $radius;
+}
+
+.media-details {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: $secondary-text;
+
+    &__title {
+        font-weight: lighter;
+    }
+
+    &__likes {
+
+        font-weight: 600;
+        font-size: $text-size;
+
+        &::after {
+            @include heart-icon;
+            content: url('../../public/assets/icons/heart-red.svg');
+        }
+    }
+}

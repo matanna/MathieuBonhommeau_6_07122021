@@ -243,7 +243,7 @@
 			"likes": 52,
 			"date": "2016-06-12",
 			"price": 70,
-			"alt-text": "Un jeune chien joue dans le sable et tirte sur sa laisse"
+			"alt-text": "Un jeune chien joue dans le sable et tire sur sa laisse"
 		},
 		{
 			"id": 394583434,
@@ -252,7 +252,7 @@
 			"likes": 23,
 			"date": "2017-03-18",
 			"price": 45,
-			"text-alt": "Crêtes de montagnes filmées par un drone"
+			"alt-text": "Crêtes de montagnes filmées par un drone"
 		},
 		{
 			"id": 343423425,
@@ -262,7 +262,7 @@
 			"likes": 101,
 			"date": "2017-04-03",
 			"price": 45,
-			"text-alt": "Lac de sources chaudes, des gens s'y baignent"
+			"alt-text": "Lac de sources chaudes, des gens s'y baignent"
 		},
 		{
 			"id": 73434243,

@@ -340,8 +340,9 @@ template {
 body {
   font-family: "DM Sans", sans-serif;
   margin: 0;
-  max-width: 1400px;
+  max-width: 1440px;
   margin: 0 auto;
+  box-sizing: border-box;
 }
 
 h1 {
@@ -402,23 +403,27 @@ header {
   text-align: center;
   text-decoration: none;
 }
-.photographer-link__title {
-  color: #D3573C;
-  font-size: 64px;
-  font-weight: lighter;
-  text-decoration: none;
-  margin-bottom: 0;
-  margin-top: 0.5em;
-}
-.photographer-link__title.card {
-  font-size: 36px;
-}
-.photographer-link__img {
+
+.photographer-img {
   height: 200px;
   width: 200px;
   object-fit: cover;
   border-radius: 50%;
   text-align: center;
+  justify-self: end;
+}
+
+.photographer-title {
+  color: #D3573C;
+  font-size: 56px;
+  font-weight: lighter;
+  text-decoration: none;
+  margin-bottom: 0;
+  margin-top: 0.5em;
+  margin-right: 0;
+}
+.photographer-title.card {
+  font-size: 36px;
 }
 
 .photographer-origin {
@@ -432,9 +437,11 @@ header {
 
 .photographer-tagline {
   font-size: 20px;
+  color: #525252;
 }
 .photographer-tagline.card {
   font-size: 13px;
+  color: #000000;
 }
 
 .photographer-price {
@@ -443,6 +450,35 @@ header {
 .photographer-price.card {
   color: #757575;
   font-size: 13px;
+}
+
+.media-thumbnail {
+  width: 350px;
+  height: 300px;
+  object-fit: cover;
+  object-position: top;
+  border-radius: 5px;
+}
+
+.media-details {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #901C1C;
+}
+.media-details__title {
+  font-weight: lighter;
+}
+.media-details__likes {
+  font-weight: 600;
+  font-size: 20px;
+}
+.media-details__likes::after {
+  position: relative;
+  cursor: pointer;
+  padding-left: 5px;
+  top: 2px;
+  content: url("../../public/assets/icons/heart-red.svg");
 }
 
 .contact_button {
@@ -456,6 +492,7 @@ header {
   background-color: #901C1C;
   border-radius: 5px;
   cursor: pointer;
+  justify-self: center;
 }
 
 form {
@@ -493,15 +530,66 @@ svg {
 
 .photographer_section {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  box-sizing: border-box;
+  grid-template-columns: repeat(3, 1fr);
   gap: 70px;
+  align-content: center;
+  align-items: center;
   margin-top: 100px;
+  justify-self: start;
 }
 
 .photograph-header {
+  display: grid;
+  box-sizing: border-box;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 70px;
+  align-content: center;
+  align-items: center;
+  gap: 0;
   background-color: #FAFAFA;
   height: 300px;
-  margin: 0 100px;
+  padding: 2rem;
+  margin-right: 100px;
+  margin-left: 100px;
+}
+
+.media-section {
+  display: grid;
+  box-sizing: border-box;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 70px;
+  align-content: center;
+  align-items: center;
+  margin: 100px;
+  gap: 95px;
+}
+
+.fix {
+  box-sizing: border-box;
+  display: flex;
+  position: fixed;
+  justify-content: space-between;
+  align-items: center;
+  right: 36px;
+  bottom: 0;
+  width: 376px;
+  font-weight: bold;
+  background-color: #DB8876;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  font-size: 20px;
+  padding: 15px 40px;
+}
+.fix > * {
+  margin: 0;
+}
+.fix__total-likes::after {
+  position: relative;
+  cursor: pointer;
+  padding-left: 5px;
+  top: 2px;
+  content: url("../../public/assets/icons/heart-black.svg");
 }
 
 /*# sourceMappingURL=style.css.map */
