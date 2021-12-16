@@ -1,5 +1,5 @@
 export class Video {
-  constructor ({ id, photographerId, video, likes, date, price, altText }) {
+  constructor ({ id, photographerId, video, likes, date, price, altText, title }) {
     this._id = id
     this._photographerId = photographerId
     this._video = video
@@ -7,6 +7,7 @@ export class Video {
     this._date = date
     this._price = price
     this._altText = altText
+    this._title = title
   }
 
   get id () {
@@ -63,5 +64,13 @@ export class Video {
 
   set altText (altText) {
     this._altText = altText
+  }
+
+  get title () {
+    return this._title
+  }
+
+  set title (title) {
+    this._title = title
   }
 }

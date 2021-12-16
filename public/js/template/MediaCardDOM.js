@@ -24,6 +24,7 @@ export class MediaCardDOM {
     const likes = document.createElement('p')
     likes.textContent = this._media.likes
     likes.classList = 'media-details__likes'
+    likes.setAttribute('aria-label', 'likes')
 
     details.append(title)
     details.append(likes)

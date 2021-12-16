@@ -3,7 +3,7 @@ import { Data } from '../datas/Data.js'
 import { Photographer } from '../models/Photographer.js'
 import { totalLikes } from '../decorators/totalLikes.js'
 import { PhotographerPageDOM } from '../template/PhotographerPageDOM.js'
-import { changePropertyAltText } from '../decorators/changePropertyAltText.js'
+import { adaptMediaProperty } from '../decorators/adaptMediaProperty.js'
 import { MediaFactory } from '../factories/MediaFactory.js'
 import { MediaDOMFactory } from '../factories/MediaDOMFactory.js'
 
@@ -26,7 +26,8 @@ class PhotographerPage {
 
       // Create the list of medias on photographer page with media data
       mediasData.forEach((element) => {
-        const media = new MediaFactory(changePropertyAltText(element))
+        const media = new MediaFactory(adaptMediaProperty(element))
+        console.log(media)
         const mediaCardDOM = new MediaDOMFactory(media, photographer)
         mediaCardDOM.buildMediaCardDOM()
       })

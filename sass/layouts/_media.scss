@@ -2,8 +2,8 @@
     width: 350px;
     height: 300px;
     object-fit: cover;
-    object-position: top;
     border-radius: $radius;
+    cursor: pointer;
 }
 
 .media-details {
@@ -20,6 +20,7 @@
 
         font-weight: 600;
         font-size: $text-size;
+        cursor: pointer;
 
         &::after {
             @include heart-icon;
