@@ -26,8 +26,7 @@ export class PhotographerCardDOM {
   createLinkElement () {
     // Create link for go on the photographer page
     const a = document.createElement('a')
-    a.setAttribute('id', `photographer-${this._photographer.id}`)
-    a.setAttribute('href', './photographer.html')
+    a.setAttribute('href', `./photographer.html?id=${this._photographer._id}`)
     a.setAttribute('aria-label', `Lien vers la page de ${this._photographer.name}`)
     a.className = 'photographer-link'
 

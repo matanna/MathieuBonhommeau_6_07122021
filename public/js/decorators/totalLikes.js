@@ -4,6 +4,5 @@ export function totalLikes (photographer, mediaData) {
     totalLikes += element.likes
   })
   photographer.totalLikes = totalLikes
-  console.log(photographer)
   return photographer
 }
