@@ -25,6 +25,8 @@ export class MediaCardDOM {
     likes.textContent = this._media.likes
     likes.classList = 'media-details__likes'
     likes.setAttribute('aria-label', 'likes')
+    likes.setAttribute('data-id', this._media.id)
+    likes.setAttribute('data-likes', this._media.likes)
 
     details.append(title)
     details.append(likes)

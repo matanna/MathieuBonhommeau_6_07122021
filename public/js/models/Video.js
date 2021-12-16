@@ -1,13 +1,13 @@
 export class Video {
-  constructor ({ id, photographerId, video, likes, date, price, altText, title }) {
+  constructor ({ id, photographerId, video, title, likes, date, price, altText }) {
     this._id = id
     this._photographerId = photographerId
+    this._title = title
     this._video = video
     this._likes = likes
     this._date = date
     this._price = price
     this._altText = altText
-    this._title = title
   }
 
   get id () {
@@ -24,6 +24,14 @@ export class Video {
 
   set photographerId (photographerId) {
     this._photographerId = photographerId
+  }
+
+  get title () {
+    return this._title
+  }
+
+  set title (title) {
+    this._title = title
   }
 
   get video () {
@@ -64,13 +72,5 @@ export class Video {
 
   set altText (altText) {
     this._altText = altText
-  }
-
-  get title () {
-    return this._title
-  }
-
-  set title (title) {
-    this._title = title
   }
 }

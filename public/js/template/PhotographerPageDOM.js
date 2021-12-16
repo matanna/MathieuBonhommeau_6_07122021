@@ -68,6 +68,7 @@ export class PhotographerPageDOM {
     const likes = document.createElement('p')
     likes.textContent = this._photographer.totalLikes
     likes.classList = 'fix__total-likes'
+    likes.setAttribute('data-total', this._photographer.totalLikes)
 
     const price = document.createElement('p')
     price.textContent = this._photographer.price

@@ -64,7 +64,7 @@
 			"likes": 62,
 			"date": "2011-12-08",
 			"price": 55,
-			"alt-text": "Mannequin portant un ensemble fashion sportif jaune"
+			"altText": "Mannequin portant un ensemble fashion sportif jaune"
 		},
 		{
 			"id": 8520927,
@@ -74,7 +74,7 @@
 			"likes": 11,
 			"date": "2011-11-06",
 			"price": 55,
-			"alt-text": "Mannequin portant un ensemble fashion avec des motifs style jungle"
+			"altText": "Mannequin portant un ensemble fashion avec des motifs style jungle"
 		},
 		{
 			"id": 9025895,
@@ -84,7 +84,7 @@
 			"likes": 72,
 			"date": "2013-08-12",
 			"price": 55,
-			"alt-text": "Mannequin portant une robe colorée à rayures"
+			"altText": "Mannequin portant une robe colorée à rayures"
 		},
 		{
 			"id": 9275938,
@@ -94,7 +94,7 @@
 			"likes": 69,
 			"date": "2018-02-22",
 			"price": 55,
-			"alt-text": "Porche idéeal pour les mariage"
+			"altText": "Porche idéeal pour les mariage"
 		},
 		{
 			"id": 2053494,
@@ -104,7 +104,7 @@
 			"likes": 2,
 			"date": "2020-05-25",
 			"price": 55,
-			"alt-text": "Un couple en lors d'un mariage"
+			"altText": "Un couple en lors d'un mariage"
 		},
 		{
 			"id": 7324238,
@@ -114,16 +114,17 @@
 			"likes": 33,
 			"date": "2019-06-12",
 			"price": 55,
-			"alt-text": "Décoration d'anniversaire pour 18 ans"
+			"altText": "Décoration d'anniversaire pour 18 ans"
 		},
 		{
 			"id": 8328953,
 			"photographerId": 82,
+			"title": "Wooden sculpture of a horse",
 			"video": "Art_Wooden_Horse_Sculpture.mp4",
 			"likes": 24,
 			"date": "2011-12-08",
 			"price": 100,
-			"alt-text": "Une sculpture en bois représentant un cheval"
+			"altText": "Une sculpture en bois représentant un cheval"
 		  },
 		{
 			"id": 7502053,
@@ -133,7 +134,7 @@
 			"likes": 88,
 			"date": "2007-05-07",
 			"price": 55,
-			"alt-text": "Peinture murale abstraite avec un triangle blanc"
+			"altText": "Peinture murale abstraite avec un triangle blanc"
 		},
 		{
 			"id": 8523492,
@@ -143,7 +144,7 @@
 			"likes": 24,
 			"date": "2018-05-05",
 			"price": 55,
-			"alt-text": "Graph sur les murs d'un tunnel pour piétons en ville"
+			"altText": "Graph sur les murs d'un tunnel pour piétons en ville"
 		},
 		{
 			"id": 75902334,
@@ -153,7 +154,7 @@
 			"likes": 75,
 			"date": "2019-11-25",
 			"price": 55,
-			"alt-text": "Peinture murale représentrant des canards colorés"
+			"altText": "Peinture murale représentrant des canards colorés"
 		},
 
 		{
@@ -164,7 +165,7 @@
 			"likes": 52,
 			"date": "2013-02-30",
 			"price": 70,
-			"alt-text": "Sportifs faisant de l'aviron, la photo est prise sur le dessus"
+			"altText": "Sportifs faisant de l'aviron, la photo est prise sur le dessus"
 		},
 		{
 			"id": 92758372,
@@ -174,7 +175,7 @@
 			"likes": 58,
 			"date": "2018-07-17",
 			"price": 70,
-			"alt-text": "Un homme blanc en costume clair et une femme noire en robe clair"
+			"altText": "Un homme blanc en costume clair et une femme noire en robe clair"
 		},
 		{
 			"id": 32958383,
@@ -184,7 +185,7 @@
 			"likes": 11,
 			"date": "2019-08-12",
 			"price": 70,
-			"alt-text": "Mannequin portant une longue robe rouge dans des escaliers"
+			"altText": "Mannequin portant une longue robe rouge dans des escaliers"
 		},
 		{
 			"id": 928587383,
@@ -194,7 +195,7 @@
 			"likes": 2,
 			"date": "2019-01-02",
 			"price": 70,
-			"alt-text": "Réunion de travail avec des post-it collés au mur"
+			"altText": "Réunion de travail avec des post-it collés au mur"
 		},
 		{
 			"id": 725639493,
@@ -204,7 +205,7 @@
 			"likes": 3,
 			"date": "2019-05-20",
 			"price": 70,
-			"alt-text": "Présentation de produits à une équipe de travail"
+			"altText": "Présentation de produits à une équipe de travail"
 		},
 		{
 			"id": 23394384,
@@ -214,7 +215,7 @@
 			"likes": 52,
 			"date": "2019-07-18",
 			"price": 70,
-			"alt-text": "Musicienne devant son clavier"
+			"altText": "Musicienne devant son clavier"
 		},
 		{
 			"id": 87367293,
@@ -224,7 +225,7 @@
 			"likes": 23,
 			"date": "2018-02-22",
 			"price": 70,
-			"alt-text": "Chanteuse sur scène"
+			"altText": "Chanteuse sur scène"
 		},
 		{
 			"id": 593834784,
@@ -234,25 +235,27 @@
 			"likes": 52,
 			"date": "2017-03-13",
 			"price": 70,
-			"alt-text": "Cerf dans une prairie"
+			"altText": "Cerf dans une prairie"
 		},
 		{
 			"id": 83958935,
 			"photographerId": 925,
+			"title": "Cute puppy on sunset",
 			"video": "Animals_Puppiness.mp4",
 			"likes": 52,
 			"date": "2016-06-12",
 			"price": 70,
-			"alt-text": "Un jeune chien joue dans le sable et tire sur sa laisse"
+			"altText": "Un jeune chien joue dans le sable et tire sur sa laisse"
 		},
 		{
 			"id": 394583434,
 			"photographerId": 527,
+			"title": "Rocky mountains from the air",
 			"video": "Travel_Rock_Mountains.mp4",
 			"likes": 23,
 			"date": "2017-03-18",
 			"price": 45,
-			"alt-text": "Crêtes de montagnes filmées par un drone"
+			"altText": "Crêtes de montagnes filmées par un drone"
 		},
 		{
 			"id": 343423425,
@@ -262,7 +265,7 @@
 			"likes": 101,
 			"date": "2017-04-03",
 			"price": 45,
-			"alt-text": "Lac de sources chaudes, des gens s'y baignent"
+			"altText": "Lac de sources chaudes, des gens s'y baignent"
 		},
 		{
 			"id": 73434243,
@@ -272,7 +275,7 @@
 			"likes": 99,
 			"date": "2018-04-30",
 			"price": 45,
-			"alt-text": "Route sinueuse dans une vallée"
+			"altText": "Route sinueuse dans une vallée"
 		},
 		{
 			"id": 23425523,
@@ -282,7 +285,7 @@
 			"likes": 34,
 			"date": "2016-04-05",
 			"price": 45,
-			"alt-text": "Pont métallique dans une forêt"
+			"altText": "Pont métallique dans une forêt"
 		},
 		{
 			"id": 23134513,
@@ -292,7 +295,7 @@
 			"likes": 23,
 			"date": "2017-03-18",
 			"price": 45,
-			"alt-text": "Barque sur un lac de montagne"
+			"altText": "Barque sur un lac de montagne"
 		},
 		{
 			"id": 92352352,
@@ -302,7 +305,7 @@
 			"likes": 66,
 			"date": "2018-05-24",
 			"price": 45,
-			"alt-text": "Portrait d'une jeune femme rousse"
+			"altText": "Portrait d'une jeune femme rousse"
 		},
 		{
 			"id": 34513453,
@@ -312,7 +315,7 @@
 			"likes": 52,
 			"date": "2017-04-21",
 			"price": 45,
-			"alt-text": "Portrait noir et blanc d'un jeune homme métisse"
+			"altText": "Portrait noir et blanc d'un jeune homme métisse"
 		},
 		{
 			"id": 23523533,
@@ -322,7 +325,7 @@
 			"likes": 95,
 			"date": "2018-11-02",
 			"price": 45,
-			"alt-text": "Portrait noir et blanc d'une jeune femme noire avec les cheveux clair"
+			"altText": "Portrait noir et blanc d'une jeune femme noire avec les cheveux clair"
 		},
 		{
 			"id": 525834234,
@@ -332,7 +335,7 @@
 			"likes": 25,
 			"date": "2019-01-02",
 			"price": 45,
-			"alt-text": "Portrait d'un homme tenant une cigarette"
+			"altText": "Portrait d'un homme tenant une cigarette"
 		},
 
 		{
@@ -343,7 +346,7 @@
 			"likes": 88,
 			"date": "2019-02-03",
 			"price": 45,
-			"alt-text": "Paysage de montagne - Photo prise de très haut"
+			"altText": "Paysage de montagne - Photo prise de très haut"
 		},
 		{
 			"id": 625025343,
@@ -353,7 +356,7 @@
 			"likes": 85,
 			"date": "2019-04-03",
 			"price": 45,
-			"alt-text": "Paysage d'une ville au bord de la mer"
+			"altText": "Paysage d'une ville au bord de la mer"
 		},
 		{
 			"id": 2525345343,
@@ -363,7 +366,7 @@
 			"likes": 34,
 			"date": "2019-04-07",
 			"price": 45,
-			"alt-text": "Portrait noir et blanc d'une enfant allongée se tenant la tête"
+			"altText": "Portrait noir et blanc d'une enfant allongée se tenant la tête"
 		},
 		{
 			"id": 2523434634,
@@ -373,7 +376,7 @@
 			"likes": 63,
 			"date": "2019-04-07",
 			"price": 45,
-			"alt-text": "Portrait d'une jeune femme noire avec des lunettes"
+			"altText": "Portrait d'une jeune femme noire avec des lunettes"
 		},
 		{
 			"id": 398847109,
@@ -383,7 +386,7 @@
 			"likes": 55,
 			"date": "2019-06-20",
 			"price": 45,
-			"alt-text": "Portrait noire et blanc d'une jeune femme blanche"
+			"altText": "Portrait noire et blanc d'une jeune femme blanche"
 		},
 		{
 			"id": 2534342,
@@ -393,7 +396,7 @@
 			"likes": 25,
 			"date": "2019-06-21",
 			"price": 45,
-			"alt-text": "Table de repas de mariage sur la plage"
+			"altText": "Table de repas de mariage sur la plage"
 		},
 		{
 			"id": 65235234,
@@ -403,7 +406,7 @@
 			"likes": 52,
 			"date": "2019-06-25",
 			"price": 45,
-			"alt-text": "Un couple de marié sur des rochers"
+			"altText": "Un couple de marié sur des rochers"
 		},
 		{
 			"id": 23523434,
@@ -413,16 +416,17 @@
 			"likes": 77,
 			"date": "2019-06-28",
 			"price": 45,
-			"alt-text": "Un couple de mariés sous des arbres"
+			"altText": "Un couple de mariés sous des arbres"
 		},
 		{
 			"id": 5234343,
 			"photographerId": 243,
+			"title": "Wild horses in the mountains",
 			"video": "Animals_Wild_Horses_in_the_mountains.mp4",
 			"likes": 142,
 			"date": "2019-08-23",
 			"price": 60,
-			"alt-text": "Troupeau de chevaux dans la montagne"
+			"altText": "Troupeau de chevaux dans la montagne"
 		  },
 		{
 			"id": 95234343,
@@ -432,7 +436,7 @@
 			"likes": 59,
 			"date": "2019-07-02",
 			"price": 60,
-			"alt-text": "Petit oiseau coloré"
+			"altText": "Petit oiseau coloré"
 		},
 
 		{
@@ -443,7 +447,7 @@
 			"likes": 25,
 			"date": "2019-04-03",
 			"price": 60,
-			"alt-text": "Rue au Japon avec deux femmes en train de discuter"
+			"altText": "Rue au Japon avec deux femmes en train de discuter"
 		},
 		{
 			"id": 2523434,
@@ -453,7 +457,7 @@
 			"likes": 53,
 			"date": "2019-05-06",
 			"price": 60,
-			"alt-text": "Venise - Vue d'un des canaux la traversant"
+			"altText": "Venise - Vue d'un des canaux la traversant"
 		},
 		{
 			"id": 95293534,
@@ -463,7 +467,7 @@
 			"likes": 33,
 			"date": "2019-05-12",
 			"price": 60,
-			"alt-text": "Paysage d'un lac de montagne"
+			"altText": "Paysage d'un lac de montagne"
 		},
 		{
 			"id": 356234343,
@@ -473,7 +477,7 @@
 			"likes": 53,
 			"date": "2019-06-20",
 			"price": 60,
-			"alt-text": "Vélo contre escalier dans la rue à Paris"
+			"altText": "Vélo contre escalier dans la rue à Paris"
 		},
 		{
 			"id": 235234343,
@@ -483,7 +487,7 @@
 			"likes": 63,
 			"date": "2019-06-26",
 			"price": 60,
-			"alt-text": "Paysage d'une ville vue à travers un porche en Inde"
+			"altText": "Paysage d'une ville vue à travers un porche en Inde"
 		},
 		{
 			"id": 6234234343,
@@ -493,7 +497,7 @@
 			"likes": 52,
 			"date": "2019-06-30",
 			"price": 60,
-			"alt-text": "Monument avec une coupole coloré à St Petersbourg, photo prise en vue plongeante"
+			"altText": "Monument avec une coupole coloré à St Petersbourg, photo prise en vue plongeante"
 		},
 		{
 			"id": 6525666253,
@@ -503,7 +507,7 @@
 			"likes": 63,
 			"date": "2019-07-20",
 			"price": 60,
-			"alt-text": "Ville sur une montagne au Tibet"
+			"altText": "Ville sur une montagne au Tibet"
 		},
 		{
 			"id": 98252523433,
@@ -513,16 +517,17 @@
 			"likes": 88,
 			"date": "2020-01-05",
 			"price": 60,
-			"alt-text": "Tour de Pise à Rome, photo en vue plongeante"
+			"altText": "Tour de Pise à Rome, photo en vue plongeante"
 		},
 		{
 			"id": 9259398453,
 			"photographerId": 195,
+			"title": "Drone shot of Buenos Aires highways",
 			"video": "Architecture_coverr_circle_empty_highway_in_buenos_aires.mp4",
 			"likes": 57,
 			"date": "2020-01-20",
 			"price": 65,
-			"alt-text": "Paysage de Buenos Aires filmé par les airs"
+			"altText": "Paysage de Buenos Aires filmé par les airs"
 		  },
 		{
 			"id": 3523523534,
@@ -532,16 +537,17 @@
 			"likes": 54,
 			"date": "2020-05-05",
 			"price": 60,
-			"alt-text": "Immeuble de coin de rue, photo prise en vue plongeante"
+			"altText": "Immeuble de coin de rue, photo prise en vue plongeante"
 		},
 		{
 			"id": 952343423,
 			"photographerId": 930,
+			"title": "Tricks in te air",
 			"video": "Sport_Tricks_in_the_air.mp4",
 			"likes": 150,
 			"date": "2018-02-30",
 			"price": 70,
-			"alt-text": "Gymnaste tournant suspendu par la main"
+			"altText": "Gymnaste tournant suspendu par la main"
 		  },
 		{
 			"id": 235234343,
@@ -551,7 +557,7 @@
 			"likes": 101,
 			"date": "2018-03-05",
 			"price": 65,
-			"alt-text": "Escaladeuse en plein action sur une paroi - photo prise d'en haut"
+			"altText": "Escaladeuse en plein action sur une paroi - photo prise d'en haut"
 		},
 		{
 			"id": 235343222,
@@ -561,7 +567,7 @@
 			"likes": 103,
 			"date": "2018-03-10",
 			"price": 70,
-			"alt-text": "Surfer dans un tunnel"
+			"altText": "Surfer dans un tunnel"
 		},
 		{
 			"id": 7775342343,
@@ -571,7 +577,7 @@
 			"likes": 77,
 			"date": "2018-04-16",
 			"price": 50,
-			"alt-text": "Skieur acrobatique faisant un tricks"
+			"altText": "Skieur acrobatique faisant un tricks"
 		},
 		{
 			"id": 9253445784,
@@ -581,7 +587,7 @@
 			"likes": 88,
 			"date": "2018-04-22",
 			"price": 65,
-			"alt-text": "Coureurs lors d'un sprint sur une piste d'athlétisme"
+			"altText": "Coureurs lors d'un sprint sur une piste d'athlétisme"
 		},
 		{
 			"id": 22299394,
@@ -591,7 +597,7 @@
 			"likes": 95,
 			"date": "2018-04-27",
 			"price": 70,
-			"alt-text": "Skater faisantt un tricks en haut d'une rampe"
+			"altText": "Skater faisantt un tricks en haut d'une rampe"
 		},
 		{
 			"id": 3452342633,
@@ -601,7 +607,7 @@
 			"likes": 52,
 			"date": "2018-05-03",
 			"price": 75,
-			"alt-text": "Coupole en verre blanche dans un batiment, photo prise de l'intérieur"
+			"altText": "Coupole en verre blanche dans un batiment, photo prise de l'intérieur"
 		},
 		{
 			"id": 939234243,
@@ -611,7 +617,7 @@
 			"likes": 55,
 			"date": "2018-05-10",
 			"price": 72,
-			"alt-text": "Batiment d'architecture moderne sous forme de vague"
+			"altText": "Batiment d'architecture moderne sous forme de vague"
 		},
 		{
 			"id": 222959233,
@@ -621,7 +627,7 @@
 			"likes": 85,
 			"date": "2018-05-15",
 			"price": 71,
-			"alt-text": "Immeuble en form de fer à cheval, photo prise du bas"
+			"altText": "Immeuble en form de fer à cheval, photo prise du bas"
 		},
 		{
 			"id": 965933434,
@@ -631,7 +637,7 @@
 			"likes": 66,
 			"date": "2018-05-20",
 			"price": 58,
-			"alt-text": "Immeuble constitué entièrement de verre, photo prise du bas"
+			"altText": "Immeuble constitué entièrement de verre, photo prise du bas"
 		},
 		{
 			"id": 777723343,
@@ -641,7 +647,7 @@
 			"likes": 79,
 			"date": "2018-05-21",
 			"price": 80,
-			"alt-text": "Immeuble à l'architecture arrondie"
+			"altText": "Immeuble à l'architecture arrondie"
 		}
 	]
 }
