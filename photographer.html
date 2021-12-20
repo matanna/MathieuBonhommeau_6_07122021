@@ -38,17 +38,21 @@
     <!-- Main -->
     <main id="main">
       <div class="photograph-header">
-        <button class="contact_button" onclick="displayModal()" aria-label="Contactez moi">Contactez-moi</button>
+        <button class="contact_button" aria-label="Contactez moi">Contactez-moi</button>
       </div>
       <div class="media-section"></div>
     </main>
 
+    <!-- Lightbox -->
+    <div id="lightbox" role="dialog">
+      <div class="lightbox-modal"></div>
+    </div>
+
     <!-- Modal for contact form -->
-    <div id="contact_modal" role="dialog">
-			<div class="modal">
+    <div id="contact" role="dialog">
+			<div class="contact-modal">
 				<header>
           <h2>Contactez-moi</h2>
-          <img src="./public/assets/icons/close.svg" onclick="closeModal()" />
         </header>
 				<form>
 					<div>

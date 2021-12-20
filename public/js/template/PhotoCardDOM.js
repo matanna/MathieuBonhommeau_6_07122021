@@ -7,6 +7,7 @@ export class PhotoCardDOM extends MediaCardDOM {
     const img = document.createElement('img')
     img.setAttribute('src', `./public/assets/photographers/${this._photographer.name}/mediums/${this._media.image}`)
     img.setAttribute('alt', this._media.altText)
+    img.setAttribute('data-id', this._media.id)
     img.classList = 'media-thumbnail'
     this._mediaCard.append(img)
   }

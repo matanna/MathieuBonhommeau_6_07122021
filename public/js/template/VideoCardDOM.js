@@ -6,6 +6,7 @@ export class VideoCardDOM extends MediaCardDOM {
   createMediaPicture () {
     const video = document.createElement('video')
     video.classList = 'media-thumbnail'
+    video.setAttribute('data-id', this._media.id)
 
     const source = document.createElement('source')
     source.setAttribute('src', `./public/assets/photographers/${this._photographer.name}/videos/${this._media.video}`)
@@ -13,6 +14,5 @@ export class VideoCardDOM extends MediaCardDOM {
 
     video.append(source)
     this._mediaCard.append(video)
-    console.log(this._media)
   }
 }

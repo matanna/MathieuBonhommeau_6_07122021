@@ -6,6 +6,7 @@ import { PhotographerPageDOM } from '../template/PhotographerPageDOM.js'
 import { MediaFactory } from '../factories/MediaFactory.js'
 import { MediaDOMFactory } from '../factories/MediaDOMFactory.js'
 import { addLike } from '../listeners/addLike.js'
+import { displayModal } from '../listeners/displayModal.js'
 
 class PhotographerPage {
   constructor () {
@@ -32,6 +33,10 @@ class PhotographerPage {
         const media = new MediaFactory(element)
         const mediaCardDOM = new MediaDOMFactory(media, photographer)
         mediaCardDOM.buildMediaCardDOM()
+
+        // Event listener for display lightbox when the user click on the media image or video
+        const mediaDisplayed = document.querySelector(`.media-thumbnail[data-id="${media.id}"]`)
+        mediaDisplayed.addEventListener('click', displayModal)
       })
 
       // Event listener increment likes for each media and for sum of likes when the user click on the heart icon
