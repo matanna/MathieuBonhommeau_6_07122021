@@ -11,3 +11,11 @@
     cursor: pointer;
     justify-self: center;
 }
+
+.close-modal {
+    position: absolute;
+    color: $secondary-text;
+    top: 70px;
+    right: 120px;
+    cursor: pointer;
+}

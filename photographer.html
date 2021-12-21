@@ -38,17 +38,21 @@
     <!-- Main -->
     <main id="main">
       <div class="photograph-header">
-        <button class="contact_button" onclick="displayModal()" aria-label="Contactez moi">Contactez-moi</button>
+        <button class="contact_button" aria-label="Contactez moi">Contactez-moi</button>
       </div>
       <div class="media-section"></div>
     </main>
 
+    <!-- Lightbox -->
+    <div id="lightbox" role="dialog">
+      <div class="lightbox-modal"></div>
+    </div>
+
     <!-- Modal for contact form -->
-    <div id="contact_modal" role="dialog">
-			<div class="modal">
+    <div id="contact" role="dialog">
+			<div class="contact-modal">
 				<header>
           <h2>Contactez-moi</h2>
-          <img src="./public/assets/icons/close.svg" onclick="closeModal()" />
         </header>
 				<form>
 					<div>
@@ -60,11 +64,7 @@
 			</div>
 		</div>
 
-    <script type="module" src="./public/js/factories/MediaFactory.js"></script>
-    <script type="module" src="./public/js/factories/MediaDOMFactory.js"></script>
-    <script type="module" src="./public/js/template/PhotoCardDOM.js"></script>
-    <script type="module" src="./public/js/template/VideoCardDOM.js"></script>
     <script type="module" src="./public/js/pages/photographer-page.js"></script>
-
+    
   </body>
 </html>
