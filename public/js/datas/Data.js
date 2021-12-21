@@ -63,14 +63,26 @@ export class Data {
   }
 
   /**
-   * This function retrieves all photos of a photographer
+   * This function retrieves all medias of a photographer
    * @param {integer} photographerId
    * @returns {object} Promise
    */
-  async getMedia (photographerId) {
+  async getMedias (photographerId) {
     const datas = await this.get()
     return datas.media.filter(function (element) {
       return (element.photographerId === parseInt(photographerId))
+    })
+  }
+
+  /**
+   * This function retrieves one media in terms of his id
+   * @param {integer} mediaId
+   * @returns {object} Promise
+   */
+  async getMedia (mediaId) {
+    const datas = await this.get()
+    return datas.media.filter(function (element) {
+      return (element.id === parseInt(mediaId))
     })
   }
 }

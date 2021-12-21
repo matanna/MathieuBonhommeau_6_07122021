@@ -1,5 +1,4 @@
 import { LightboxDOM } from '../template/LightboxDOM.js'
-import datas from '/data/datas.json' assert { type: "json" }
 
 /**
  * Callback function for display modals on photographer page when user click

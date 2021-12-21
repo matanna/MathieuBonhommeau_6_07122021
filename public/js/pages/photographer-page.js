@@ -19,7 +19,7 @@ class PhotographerPage {
   async displayData () {
     try {
       const photographerData = await this._datas.getPhotographer(this._photographerId)
-      const mediasData = await this._datas.getMedia(this._photographerId)
+      const mediasData = await this._datas.getMedias(this._photographerId)
 
       // Create a new Photographer and use a decorator for add total of likes in the object
       const photographer = totalLikes(new Photographer(photographerData[0]), mediasData)

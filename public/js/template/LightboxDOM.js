@@ -1,4 +1,6 @@
+/* eslint-disable */
 import datas from '/data/datas.json' assert { type: "json" }
+/* eslint-enable */
 
 /**
  * Class for build the lightbox
