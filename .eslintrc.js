@@ -6,10 +6,12 @@ module.exports = {
   extends: [
     'standard'
   ],
+  parser: '@babel/eslint-parser',
   parserOptions: {
     ecmaVersion: 8,
     sourceType: 'module'
   },
   rules: {
+    strict: 1
   }
 }
