@@ -17,7 +17,7 @@ jobs:
     - name: eslint install
       run: npm install eslint --save-dev
     - name: babel parser install
-      run: npm install babel-eslint --save-dev
+      run: npm install @babel/eslint-parser --save-dev
     - name: babel plugin import assertions install
       run: npm install --save-dev @babel/plugin-syntax-import-assertions
     - name: run eslint
