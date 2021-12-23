@@ -13,6 +13,7 @@ export class PhotographerPageDOM {
    */
   buildPhotographerPageDOM () {
     this.createTitleBlockElement()
+    this.updateContactMe()
     this.createPortraitElement()
     this.createFixBottomElement()
     return this._photographerBanner
@@ -47,6 +48,11 @@ export class PhotographerPageDOM {
     titleBlock.append(tagline)
 
     this._photographerBanner.prepend(titleBlock)
+  }
+
+  updateContactMe () {
+    const contactBtn = document.querySelector('.contact_button')
+    contactBtn.setAttribute('data-photographerId', this._photographer.id)
   }
 
   /**

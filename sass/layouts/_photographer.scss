@@ -33,6 +33,12 @@
     margin-top: 0.5em;
     margin-right: 0;
 
+    &--modal {
+        color: $black;
+        margin-top: 0;
+        position: relative;
+    }
+
     &.card {
         font-size: $card-title-size;
     }
