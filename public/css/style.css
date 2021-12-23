@@ -360,20 +360,31 @@ header {
   height: 90px;
 }
 
+.modal {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  z-index: 1;
+}
+
 #contact {
   display: none;
+  background-color: rgba(255, 255, 255, 0.4);
 }
 
 .contact-modal {
   border-radius: 5px;
   background-color: #DB8876;
-  width: 50%;
+  width: 30%;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: space-between;
   padding: 35px;
-  margin: auto;
+  margin: 40px auto;
 }
 .contact-modal header {
   justify-content: space-between;
@@ -381,11 +392,6 @@ header {
 }
 .contact-modal header img {
   cursor: pointer;
-}
-.contact-modal header h2 {
-  font-size: 64px;
-  font-weight: normal;
-  text-align: center;
 }
 
 .photographer {
@@ -421,6 +427,11 @@ header {
   margin-bottom: 0;
   margin-top: 0.5em;
   margin-right: 0;
+}
+.photographer-title--modal {
+  color: #000000;
+  margin-top: 0;
+  position: relative;
 }
 .photographer-title.card {
   font-size: 36px;
@@ -482,14 +493,6 @@ header {
 }
 
 #lightbox {
-  display: none;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  position: fixed;
-  z-index: 1;
   background-color: #FFFFFF;
 }
 
@@ -560,10 +563,17 @@ header {
 
 .close-modal {
   position: absolute;
+  cursor: pointer;
+}
+.close-modal--lightbox {
   color: #901C1C;
   top: 70px;
   right: 120px;
-  cursor: pointer;
+}
+.close-modal--contact {
+  top: 10px;
+  right: 0;
+  fill: #FFFFFF;
 }
 
 form {
@@ -571,10 +581,12 @@ form {
   width: 100%;
   flex-direction: column;
   align-items: flex-start;
+  padding-top: 20px;
 }
 form label {
   color: #312E2E;
   font-size: 36px;
+  padding-top: 10px;
 }
 form div {
   display: flex;
@@ -585,9 +597,25 @@ form div {
 }
 form input {
   width: 100%;
-  height: 68px;
+  height: 55px;
   border: none;
   border-radius: 5px;
+  font-size: 20px;
+}
+form textarea {
+  width: 100%;
+  border-radius: 5px;
+}
+form button {
+  margin-top: 20px;
+}
+form .formData {
+  margin-bottom: 0;
+}
+form .formData[data-error]::after {
+  content: attr(data-error);
+  color: #901C1C;
+  padding-top: 5px;
 }
 
 .logo {

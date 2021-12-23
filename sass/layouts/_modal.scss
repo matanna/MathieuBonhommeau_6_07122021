@@ -1,31 +1,10 @@
-#contact {
+.modal {
     display: none;
-}
-
-.contact-modal {
-    border-radius: 5px;
-    background-color: $modal-bg;
-    width: 50%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-    padding: 35px;
-    margin: auto;
-
-    header {
-        justify-content: space-between;
-        width: 100%;
-
-        img {
-            cursor: pointer;
-        }
-
-        h2 {
-            font-size: 64px;
-            font-weight: normal;
-            text-align: center;
-        }
-    }
-
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    z-index: 1;
 }

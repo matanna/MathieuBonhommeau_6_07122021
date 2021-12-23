@@ -34,6 +34,10 @@ class PhotographerPage {
         const mediaCardDOM = new MediaDOMFactory(media, photographer)
         mediaCardDOM.buildMediaCardDOM()
 
+        // Event listener for display the contact modal when the user click on contact-me button
+        const contactDisplayed = document.querySelector('.contact_button')
+        contactDisplayed.addEventListener('click', displayModal)
+
         // Event listener for display lightbox when the user click on the media image or video
         const mediaDisplayed = document.querySelector(`.media-thumbnail[data-id="${media.id}"]`)
         mediaDisplayed.addEventListener('click', displayModal)

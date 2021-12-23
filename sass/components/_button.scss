@@ -14,8 +14,17 @@
 
 .close-modal {
     position: absolute;
-    color: $secondary-text;
-    top: 70px;
-    right: 120px;
     cursor: pointer;
+
+    &--lightbox {
+        color: $secondary-text;
+        top: 70px;
+        right: 120px;
+    }
+
+    &--contact {
+        top: 10px;
+        right: 0;
+        fill: $white;
+    }
 }
