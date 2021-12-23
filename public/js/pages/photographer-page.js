@@ -7,6 +7,7 @@ import { MediaFactory } from '../factories/MediaFactory.js'
 import { MediaDOMFactory } from '../factories/MediaDOMFactory.js'
 import { addLike } from '../listeners/addLike.js'
 import { displayModal } from '../listeners/displayModal.js'
+import { sortMedia } from '../listeners/sortMedia.js'
 
 class PhotographerPage {
   constructor () {
@@ -42,6 +43,10 @@ class PhotographerPage {
         const mediaDisplayed = document.querySelector(`.media-thumbnail[data-id="${media.id}"]`)
         mediaDisplayed.addEventListener('click', displayModal)
       })
+
+      // Event listener for sort media when the user clik onbutton Sort by
+      const sortBy = document.querySelector('#sort-by')
+      sortBy.addEventListener('click', sortMedia)
 
       // Event listener increment likes for each media and for sum of likes when the user click on the heart icon
       const likeBtn = document.getElementsByClassName('media-details__likes')

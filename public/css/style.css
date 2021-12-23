@@ -368,7 +368,7 @@ header {
   width: 100vw;
   height: 100vh;
   position: fixed;
-  z-index: 1;
+  z-index: 10;
 }
 
 #contact {
@@ -547,7 +547,7 @@ header {
   padding-top: 1em;
 }
 
-.contact_button {
+.button {
   font-size: 20px;
   font-weight: bold;
   color: #FFFFFF;
@@ -627,6 +627,49 @@ svg {
   fill: #901C1C;
 }
 
+.sort-media {
+  margin: 100px 100px 0 100px;
+  border: none;
+  display: flex;
+  font-size: 20px;
+  position: absolute;
+  z-index: 2;
+}
+.sort-media__title {
+  padding-right: 30px;
+  font-weight: bold;
+}
+.sort-media__listbox {
+  height: auto;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.option {
+  padding: 20px 15px;
+  display: none;
+  cursor: pointer;
+}
+.option:not(:last-child) {
+  border-bottom: 1px solid #FFFFFF;
+}
+.option.selected {
+  display: block;
+  border-bottom: none;
+  position: relative;
+}
+.option.selected::after {
+  font-family: "FontAwesome";
+  content: "\f078";
+  text-align: right;
+  position: absolute;
+  right: 15px;
+}
+.option.visible {
+  display: block;
+  position: relative;
+}
+
 .photographer_section {
   display: grid;
   box-sizing: border-box;
@@ -660,14 +703,17 @@ svg {
   gap: 70px;
   align-content: center;
   align-items: center;
-  margin: 100px;
+  margin: 200px 100px 100px 100px;
   gap: 95px;
+  position: relative;
+  z-index: 1;
 }
 
 .fix {
   box-sizing: border-box;
   display: flex;
   position: fixed;
+  z-index: 2;
   justify-content: space-between;
   align-items: center;
   right: 36px;

@@ -10,14 +10,17 @@
 
 .media-section {
     @include grid-3-columns;
-    margin: 100px;
+    margin: 200px 100px 100px 100px;
     gap: 95px;
+    position: relative;
+    z-index: 1;
 }
 
 .fix {
     box-sizing: border-box;
     display: flex;
     position: fixed;
+    z-index: 2;
     justify-content: space-between;
     align-items: center;
     right: 36px;

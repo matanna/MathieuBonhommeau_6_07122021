@@ -38,7 +38,15 @@
     <!-- Main -->
     <main id="main">
       <div class="photograph-header">
-        <button class="contact_button" aria-label="Contactez moi">Contactez-moi</button>
+        <button class="contact_button button" aria-label="Contactez moi">Contactez-moi</button>
+      </div>
+      <div class="sort-media">
+        <div class="sort-media__title">Trier par</div>
+        <div role="listbox" id="sort-by" class="button sort-media__listbox">
+          <div role="option" class="option selected" data-value="popularity">Popularité</div>
+          <div role="option" class="option" data-value="date">Date</div>
+          <div role="option" class="option" data-value="title">Titre</div>
+        </div>
       </div>
       <div class="media-section"></div>
     </main>
