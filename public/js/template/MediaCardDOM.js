@@ -5,6 +5,7 @@ export class MediaCardDOM {
     this._mediaSection = document.querySelector('.media-section')
     this._mediaCard = document.createElement('div')
     this._mediaCard.classList = 'media-card'
+    this._mediaCard.setAttribute('data-date', this._media.date)
   }
 
   buildMediaCardDOM () {

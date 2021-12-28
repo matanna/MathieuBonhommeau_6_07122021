@@ -646,6 +646,7 @@ svg {
 }
 
 .option {
+  pointer-events: none;
   padding: 20px 15px;
   display: none;
   cursor: pointer;
@@ -668,6 +669,13 @@ svg {
 .option.visible {
   display: block;
   position: relative;
+}
+.option.visible:first-of-type::after {
+  font-family: "FontAwesome";
+  content: "\f077";
+  text-align: right;
+  position: absolute;
+  right: 15px;
 }
 
 .photographer_section {

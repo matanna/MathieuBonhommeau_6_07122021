@@ -19,6 +19,7 @@
 }
 
 .option {
+    pointer-events: none;
     padding: 20px 15px;
     display: none;
     cursor: pointer;
@@ -44,5 +45,13 @@
     &.visible {
         display: block;
         position: relative;
+
+        &:first-of-type::after {
+            font-family: 'FontAwesome';
+            content: '\f077';
+            text-align: right;
+            position: absolute;
+            right: 15px;
+        }
     }
 }
