@@ -5,7 +5,7 @@ import { Message } from '../models/Message.js'
 /**
  * Callback function for display modals on photographer page when user click
  */
-export function displayModal () {
+export function displayModal (event) {
   const body = document.querySelector('body')
   body.style.overflow = 'hidden'
 

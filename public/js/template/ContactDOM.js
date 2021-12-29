@@ -43,7 +43,7 @@ export class ContactDOM {
             <label for="content">Votre message</label>
             <textarea id="content" name="content" rows="6" class="field"></textarea>
           </div>
-            <button type="submit" class="contact_button" id="submit-btn" data-name="contact">Envoyer</button>
+            <button type="submit" class="button" id="submit-btn" data-name="contact">Envoyer</button>
         </form>
     `
   }

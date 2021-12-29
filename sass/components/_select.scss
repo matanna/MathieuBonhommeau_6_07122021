@@ -1,0 +1,57 @@
+.sort-media {
+    margin: 100px 100px 0 100px;
+    border: none;
+    display: flex;
+    font-size: $text-size;
+    position: absolute;
+    z-index: 2;
+
+    &__title {
+        padding-right: 30px;
+        font-weight: bold;
+    }
+
+    &__listbox {
+        height: auto;
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+}
+
+.option {
+    pointer-events: none;
+    padding: 20px 15px;
+    display: none;
+    cursor: pointer;
+
+    &:not(:last-child) {
+        border-bottom: 1px solid $white;
+    }
+
+    &.selected {
+        display: block;
+        border-bottom: none;
+        position: relative;
+
+        &::after {
+            font-family: 'FontAwesome';
+            content: '\f078';
+            text-align: right;
+            position: absolute;
+            right: 15px;
+        }
+    }
+
+    &.visible {
+        display: block;
+        position: relative;
+
+        &:first-of-type::after {
+            font-family: 'FontAwesome';
+            content: '\f077';
+            text-align: right;
+            position: absolute;
+            right: 15px;
+        }
+    }
+}
