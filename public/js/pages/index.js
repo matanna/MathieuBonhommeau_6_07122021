@@ -2,7 +2,6 @@
 import { Data } from '../datas/Data.js'
 import { Photographer } from '../models/Photographer.js'
 import { PhotographerCardDOM } from '../template/PhotographerCardDOM.js'
-// import { photoInPromote } from '../decorators/photoInPromote.js'
 
 /**
  * Class for build homepage

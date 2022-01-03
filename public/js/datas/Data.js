@@ -23,8 +23,8 @@ export class Data {
   }
 
   /**
-   * This function retrieves all photographers
-   * @returns {array} Array of Photographer objects
+   * This function retrieves all datas
+   * @returns {array} Array
    */
   async get () {
     return fetch(this._path)
