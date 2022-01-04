@@ -42,10 +42,12 @@ class PhotographerPage {
 
         // Event listener for display lightbox when the user click on the media image or video
         const mediaDisplayed = document.querySelector(`.media-thumbnail[data-id="${media.id}"]`)
-        mediaDisplayed.addEventListener('click', displayModal)
+        for (const event of ['click', 'keypress']) {
+          mediaDisplayed.addEventListener(event, displayModal)
+        }
       })
 
-      // Event listener for sort media when the user clik onbutton Sort by
+      // Event listener for sort media when the user clik on button Sort by
       const sortBy = document.querySelector('#sort-by')
       const selectBtn = new SortMediaDOM()
       selectBtn.popularitySort()

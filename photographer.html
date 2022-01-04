@@ -30,8 +30,8 @@
 
     <!-- Header -->
     <header>
-      <a href="./index.html" title="Lien vers la page d'accueil de FishEye">
-        <img src="./public/assets/images/logo.png" class="logo" alt="Page d'accueil de FishEye"/>
+      <a href="./index.html" title="Lien vers la page d'accueil de FishEye" class="logo-link">
+        <img src="./public/assets/images/logo.png" class="logo" alt="Retour vers la page d'accueil de FishEye"/>
       </a>
     </header>
 
@@ -42,18 +42,18 @@
       </div>
       <div class="sort-media">
         <div class="sort-media__title">Trier par</div>
-        <div role="listbox" id="sort-by" class="button sort-media__listbox"></div>
+        <div role="button" aria-haspopup="listbox" aria-expanded="false" id="sort-by" class="button sort-media__listbox" tabindex="0"></div>
       </div>
       <div class="media-section"></div>
     </main>
 
     <!-- Lightbox -->
-    <div id="lightbox" class="modal" role="dialog">
+    <div id="lightbox" class="modal" role="dialog" data-name="lightbox">
       <div class="lightbox-modal"></div>
     </div>
 
     <!-- Modal for contact form -->
-    <div id="contact" class="modal" role="dialog">
+    <div id="contact" class="modal" role="dialog" data-name="contact" aria-labelledby="contact-title">
 			<div class="contact-modal"></div>
     </div>
 
