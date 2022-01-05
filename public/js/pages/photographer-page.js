@@ -42,9 +42,13 @@ class PhotographerPage {
 
         // Event listener for display lightbox when the user click on the media image or video
         const mediaDisplayed = document.querySelector(`.media-thumbnail[data-id="${media.id}"]`)
-        for (const event of ['click', 'keypress']) {
-          mediaDisplayed.addEventListener(event, displayModal)
-        }
+        mediaDisplayed.addEventListener('click', displayModal)
+        // The user can use key Enter on the keyboard
+        mediaDisplayed.addEventListener('keypress', (event) => {
+          if (event.keyCode === 13) {
+            mediaDisplayed.click()
+          }
+        })
       })
 
       // Event listener for sort media when the user clik on button Sort by

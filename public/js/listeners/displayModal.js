@@ -6,55 +6,106 @@ import { Message } from '../models/Message.js'
  * Callback function for display modals on photographer page when user click
  */
 export async function displayModal (event) {
-  if (event.key === 'Enter' || event.type === 'click') {
-    const body = document.querySelector('body')
-    body.style.overflow = 'hidden'
+  const body = document.querySelector('body')
+  body.style.overflow = 'hidden'
 
-    // Focus is take off on elements behind modals
-    focusElement(false)
+  // Focus is take off on elements behind modals
+  focusElement(false)
 
-    // If clicked element contains a data-id attribute -> lightbox
-    if (this.dataset.id) {
-      const modal = document.getElementById('lightbox')
+  // If clicked element contains a data-id attribute -> lightbox
+  if (this.dataset.id) {
+    const modal = document.getElementById('lightbox')
 
-      // Build the lightbox with an object LightboxDOM (template)
-      const lightboxDOM = new LightboxDOM(this.dataset.id)
-      await lightboxDOM.build()
-      modal.style.display = 'block'
-
-      document.querySelector('.close-modal').focus()
-
-      // Event listener for display next or previous media - We call this function in recursive
-      const next = document.querySelectorAll('.arrow')
-      next.forEach((element) => element.addEventListener('click', displayModal))
-
-      // Event listener for close modals
-      const close = document.querySelector('.close-modal--lightbox')
-      for (const event of ['click', 'keypress']) {
-        close.addEventListener(event, closeModal)
-      }
-
-    // Display the contact modal
+    // Build the lightbox with an object LightboxDOM (template)
+    const lightboxDOM = new LightboxDOM(this.dataset.id)
+    await lightboxDOM.build()
+    modal.style.display = 'block'
+    
+    // Put the focus on the good element in term of the previous action
+    if (this.classList.contains('arrow--right')) {
+      document.querySelector('.arrow--right').focus()
+    } else if (this.classList.contains('arrow--left')) {
+      document.querySelector('.arrow--left').focus()
     } else {
-      const modal = document.getElementById('contact')
-
-      // Build the modal with an object ContactDOM (template)
-      const contactDOM = new ContactDOM()
-      await contactDOM.build()
-      modal.style.display = 'block'
-
-      document.querySelector('.close-modal').focus()
-
-      // Event listener for submit the form
-      const submit = document.querySelector('#submit-btn')
-      submit.addEventListener('click', submitForm, false)
-
-      // Event listener for close modals
-      const close = document.querySelector('.close-modal--contact')
-      for (const event of ['click', 'keypress']) {
-        close.addEventListener(event, closeModal)
-      }
+      document.querySelector('.close-modal--lightbox').focus()
     }
+
+    // Event listeners for display next or previous media - We call this function in recursive
+    const next = document.querySelectorAll('.arrow')
+    next.forEach((element) => {
+      element.addEventListener('click', displayModal)
+      // The user can use the key Enter on the keyboard
+      element.addEventListener('keypress', (event) => {
+        if (event.keyCode === 13) {
+          event.preventDefault()
+          element.click()
+        }
+      })
+    })
+
+    // Event listeners for close modals
+    const close = document.querySelector('.close-modal--lightbox')
+    close.addEventListener('click', closeModal)
+    // The user can use the key Enter on the keyboard
+    close.addEventListener('keypress', (event) => {
+      if (event.keyCode === 13) {
+        event.preventDefault()
+        close.click()
+      }
+    })
+
+    // Shortcuts for keyboard navigation
+    modal.addEventListener('keydown', (event) => {
+      console.log(event)
+      event.stopPropagation()
+      // Next media
+      if (event.key === 'ArrowRight') { 
+        document.querySelector('.arrow--right').click()
+      }
+      // Previous media
+      if (event.key === 'ArrowLeft') {
+        event.preventDefault()
+        document.querySelector('.arrow--left').click()
+      }
+      // Close lightbox
+      if (event.key === 'Escape') {
+        event.preventDefault()
+        document.querySelector('.close-modal--lightbox').click()
+      }
+    })
+
+  // Display the contact modal
+  } else {
+    const modal = document.getElementById('contact')
+
+    // Build the modal with an object ContactDOM (template)
+    const contactDOM = new ContactDOM()
+    await contactDOM.build()
+    modal.style.display = 'block'
+    document.querySelector('.close-modal--contact').focus()
+
+    // Event listener for submit the form
+    const submit = document.querySelector('#submit-btn')
+    submit.addEventListener('click', submitForm, false)
+
+    // Event listener for close modals
+    const close = document.querySelector('.close-modal--contact')
+    close.addEventListener('click', closeModal)
+    // The user can use the key Enter on the keyboard
+    close.addEventListener('keypress', (event) => {
+      if (event.keyCode === 13) {
+        close.click()
+      }
+    })
+
+    // Shortcuts for keyboard navigation
+    modal.addEventListener('keyup', (event) => {
+      console.log(event)
+      // Close modal contact
+      if (event.key === 'Escape') {
+        document.querySelector('.close-modal--contact').click()
+      }
+    })
   }
 }
 
@@ -62,29 +113,25 @@ export async function displayModal (event) {
  * Callback function for close modals
  */
 function closeModal (event) {
-  // if user press Enter key(13) or Space key (32) or click or the sendAndClose custom event
-  if ([32, 13].includes(event.keyCode) ||
-      ['click', 'sendAndClose'].includes(event.type)) {
-    const body = document.querySelector('body')
-    body.style.overflow = 'visible'
+  const body = document.querySelector('body')
+  body.style.overflow = 'visible'
 
-    if (this.dataset.name === 'lightbox') {
-      const modal = document.querySelector('#lightbox')
-      modal.style.display = 'none'
-      // Focus is put back on all elements which are behind the lightbox
-      focusElement(true)
-      // Focus is placed on the media which is just visited
-      document.querySelector(`.media-thumbnail[data-id="${this.dataset.id}"]`).focus()
-    }
+  if (this.dataset.name === 'lightbox') {
+    const modal = document.querySelector('#lightbox')
+    modal.style.display = 'none'
+    // Focus is put back on all elements which are behind the lightbox
+    focusElement(true)
+    // Focus is placed on the media which is just visited
+    document.querySelector(`.media-thumbnail[data-id="${this.dataset.id}"]`).focus()
+  }
 
-    if (this.dataset.name === 'contact') {
-      const modal = document.querySelector('#contact')
-      modal.style.display = 'none'
-      // Focus is put back on all elements which are behind the modal
-      focusElement(true)
-      // Focus is placed on the contact button
-      document.querySelector('.contact_button').focus()
-    }
+  if (this.dataset.name === 'contact') {
+    const modal = document.querySelector('#contact')
+    modal.style.display = 'none'
+    // Focus is put back on all elements which are behind the modal
+    focusElement(true)
+    // Focus is placed on the contact button
+    document.querySelector('.contact_button').focus()
   }
 }
 
