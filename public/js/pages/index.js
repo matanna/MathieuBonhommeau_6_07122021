@@ -91,7 +91,6 @@ class Index {
       deleteFilter.setAttribute('aria-label', 'Supprimer les filtres')
       deleteFilter.innerHTML = 'Annuler les filtres'
       document.querySelector('body').append(deleteFilter)
-
     } catch (error) {
       console.log('Un problème est survenu : ', error)
     }
