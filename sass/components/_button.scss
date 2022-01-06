@@ -25,6 +25,9 @@
     &--contact {
         top: 10px;
         right: 0;
-        fill: $white;
+
+        svg {
+            fill: $white;
+        }
     }
 }

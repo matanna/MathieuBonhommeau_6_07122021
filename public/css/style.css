@@ -573,6 +573,8 @@ header {
 .close-modal--contact {
   top: 10px;
   right: 0;
+}
+.close-modal--contact svg {
   fill: #FFFFFF;
 }
 

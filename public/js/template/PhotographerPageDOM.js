@@ -80,6 +80,7 @@ export class PhotographerPageDOM {
     const price = document.createElement('p')
     price.textContent = this._photographer.price
     price.classList = 'fix__price'
+    price.setAttribute('aria-label', 'Tarif journalier du photographe')
 
     fix.append(likes)
     fix.append(price)

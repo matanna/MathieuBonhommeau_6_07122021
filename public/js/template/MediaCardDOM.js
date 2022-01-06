@@ -6,6 +6,8 @@ export class MediaCardDOM {
     this._mediaCard = document.createElement('div')
     this._mediaCard.classList = 'media-card'
     this._mediaCard.setAttribute('data-date', this._media.date)
+    this._mediaCard.setAttribute('tabindex', 0)
+    this._mediaCard.setAttribute('aria-labelledby', `card-title-${this._media.id}`)
   }
 
   buildMediaCardDOM () {
@@ -20,13 +22,15 @@ export class MediaCardDOM {
 
     const title = document.createElement('h3')
     title.textContent = this._media.title
+    title.setAttribute('id', `card-title-${this._media.id}`)
     title.classList = 'media-details__title'
 
     const likes = document.createElement('p')
     likes.textContent = this._media.likes
     likes.classList = 'media-details__likes'
-    likes.setAttribute('aria-label', 'likes')
+    likes.setAttribute('aria-label', 'Cliquer pour ajouter un like')
     likes.setAttribute('data-likes', this._media.likes)
+    likes.setAttribute('tabindex', 0)
 
     details.append(title)
     details.append(likes)
