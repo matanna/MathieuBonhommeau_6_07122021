@@ -31,21 +31,21 @@ export class ContactDOM {
         <form action="#" method="post">
           <div class="formData" id="firstname-input">
             <label for="firstname">Prénom</label>
-            <input type="text" id="firstname" name="firstname" class="field" aria-labelledby="firstname-input">
+            <input type="text" id="firstname" name="firstname" class="field" aria-labelledby="firstname-input" tabindex="2">
           </div>
           <div class="formData" id="lastname-input">
             <label for="lastname">Nom</label>
-            <input type="text" id="lastname" name="lastname" class="field" aria-labelledby="lastname-input">
+            <input type="text" id="lastname" name="lastname" class="field" aria-labelledby="lastname-input" tabindex="3">
           </div>
           <div class="formData" id="email-input">
             <label for="email">Email</label>
-            <input type="email" id="email" name="email" class="field" aria-labelledby="email-input">
+            <input type="email" id="email" name="email" class="field" aria-labelledby="email-input" tabindex="4">
           </div>
           <div class="formData" id="content-area">
             <label for="content">Votre message</label>
-            <textarea id="content" name="content" rows="6" class="field" aria-labelledby="content-area"></textarea>
+            <textarea id="content" name="content" rows="6" class="field" aria-labelledby="content-area" tabindex="5"></textarea>
           </div>
-            <button type="submit" class="button" id="submit-btn" aria-label="Envoyer le message" data-name="contact">Envoyer</button>
+            <button type="submit" class="button" id="submit-btn" aria-label="Envoyer le message" data-name="contact" tabindex="6">Envoyer</button>
         </form>
     `
   }

@@ -41,14 +41,14 @@
         <button class="contact_button button" aria-label="Contactez moi">Contactez-moi</button>
       </div>
       <div class="sort-media">
-        <div class="sort-media__title">Trier par</div>
-        <div role="button" aria-haspopup="listbox" aria-expanded="false" id="sort-by" class="button sort-media__listbox" tabindex="0"></div>
+        <label class="sort-media__title" id="sort-media__title" for="sort-by">Trier par</label>
+        <div role="button" aria-haspopup="listbox" aria-expanded="false" id="sort-by" class="button sort-media__listbox" tabindex="0" aria-labelledby="sort-media__title"></div>
       </div>
       <div class="media-section"></div>
     </main>
 
     <!-- Lightbox -->
-    <div id="lightbox" class="modal" role="dialog" data-name="lightbox">
+    <div id="lightbox" class="modal" role="dialog" data-name="lightbox" aria-labelledby="media-title" aria-label="Vue rapprochée de l'image">
       <div class="lightbox-modal"></div>
     </div>
 

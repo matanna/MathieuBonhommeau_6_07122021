@@ -6,30 +6,30 @@ export class SortMediaDOM {
 
   popularitySort () {
     this._selectBtn.innerHTML = `
-      <div role="listbox">
-        <div role="option" id="popularity" class="option selected" data-value="popularity">Popularité</div>
-        <div role="option" id="date" class="option" data-value="date">Date</div>
-        <div role="option" id="title" class="option" data-value="title">Titre</div>
+      <div role="listbox" id="listbox-options" aria-selected="popularity">
+        <div role="option" id="popularity" class="option selected" data-value="popularity" tabindex="0" aria-label="Trier par popularité">Popularité</div>
+        <div role="option" id="date" class="option" data-value="date" tabindex="0" aria-label="Trier par date">Date</div>
+        <div role="option" id="title" class="option" data-value="title" tabindex="0" aria-label="Trier par titre">Titre</div>
       </div>
     `
   }
 
   dateSort () {
     this._selectBtn.innerHTML = `
-      <div role="listbox">
-        <div role="option" id="date" class="option selected" data-value="date">Date</div>
-        <div role="option" id="popularity" class="option" data-value="popularity">Popularité</div>
-        <div role="option" id="title" class="option" data-value="title">Titre</div>
+      <div role="listbox" id="listbox-options" aria-selected="date">
+        <div role="option" id="date" class="option selected" data-value="date" tabindex="0" aria-label="Trier par date">Date</div>
+        <div role="option" id="popularity" class="option" data-value="popularity" tabindex="0" aria-label="Trier par popularité">Popularité</div>
+        <div role="option" id="title" class="option" data-value="title" tabindex="0" aria-label="Trier par titre">Titre</div>
       </div>
     `
   }
 
   titleSort () {
     this._selectBtn.innerHTML = `
-      <div role="listbox">
-        <div role="option" id="title  " class="option selected" data-value="title">Titre</div>
-        <div role="option" id="popularity" class="option" data-value="popularity">Popularité</div>
-        <div role="option" id="date" class="option" data-value="date">Date</div>
+      <div role="listbox" id="listbox-options" aria-selected="title">
+        <div role="option" id="title " class="option selected" data-value="title" tabindex="0" aria-label="Trier par titre">Titre</div>
+        <div role="option" id="popularity" class="option" data-value="popularity" tabindex="0" aria-label="Trier par popularité">Popularité</div>
+        <div role="option" id="date" class="option" data-value="date" tabindex="0" aria-label="Trier par date">Date</div>
       </div>
     `
   }

@@ -51,17 +51,95 @@ class PhotographerPage {
         })
       })
 
-      // Event listener for sort media when the user clik on button Sort by
+      // Sort system
       const sortBy = document.querySelector('#sort-by')
       const selectBtn = new SortMediaDOM()
       selectBtn.popularitySort()
+
+      // Event listener for sort media when the user clik on button Sort by
       sortBy.addEventListener('click', sortMedia)
+      sortBy.addEventListener('keypress', (event) => {
+        if (event.key === 'Enter') {
+          console.log(event)
+          sortBy.click()
+        }
+      })
 
       // Event listener increment likes for each media and for sum of likes when the user click on the heart icon
       const likeBtn = document.getElementsByClassName('media-details__likes')
       for (let i = 0; i < likeBtn.length; i++) {
         likeBtn[i].addEventListener('click', addLike)
+        // The user can use key Enter or key + on the keyboard
+        likeBtn[i].addEventListener('keypress', (event) => {
+          console.log(event)
+          if (event.key === 'Enter' || event.key === '+') {
+            likeBtn[i].click()
+          }
+        })
       }
+
+      // Shortcuts for keyboard navigation
+      window.addEventListener('keydown', (event) => {
+        // Check if modals are display with the css propertie display block
+        const contactElement = document.querySelector('#contact')
+        const lightboxElement = document.querySelector('#lightbox')
+
+        // Keyboard navigation for the lightbox
+        if (lightboxElement.style.display === 'block') {
+          // Block the focus in the lightbox
+          if (event.key === 'Tab') {
+            if (event.target === document.querySelector('.close-modal--lightbox')) {
+              event.preventDefault()
+              document.querySelector('.lightbox-media').focus()
+            }
+          }
+          if (event.key === 'Tab' && event.shiftKey === true) {
+            if (event.target === document.querySelector('.lightbox-media')) {
+              event.preventDefault()
+              document.querySelector('.close-modal--lightbox').focus()
+            }
+          }
+          // Next media
+          if (event.key === 'ArrowRight') {
+            console.log(event)
+            document.querySelector('.arrow--right').click()
+          }
+          // Previous media
+          if (event.key === 'ArrowLeft') {
+            document.querySelector('.arrow--left').click()
+          }
+          // Read video
+          if (event.code === 'Space' && lightboxElement.querySelector('video')) {
+            lightboxElement.querySelector('video').play()
+          }
+          // Close lightbox
+          if (event.key === 'Escape') {
+            document.querySelector('.close-modal--lightbox').click()
+          }
+        }
+
+        // Keyboard navigation for the contact modal
+        if (contactElement.style.display === 'block') {
+          console.log(event)
+          // Block the focus in the lightbox
+          if (event.key === 'Tab') {
+            if (event.target === document.querySelector('#submit-btn')) {
+              event.preventDefault()
+              document.querySelector('.close-modal--contact').focus()
+            }
+          }
+          if (event.key === 'Tab' && event.shiftKey === true) {
+            if (event.target === document.querySelector('.close-modal--contact')) {
+              event.preventDefault()
+              document.querySelector('#submit-btn').focus()
+            }
+          }
+          // Close contact modal
+          if (event.key === 'Escape') {
+            document.querySelector('.close-modal--contact').click()
+          }
+        }
+      })
     } catch (error) {
       console.log('Un problème est survenu : ', error)
     }

@@ -9,6 +9,8 @@ export class PhotoCardDOM extends MediaCardDOM {
     img.setAttribute('alt', this._media.altText)
     img.setAttribute('data-id', this._media.id)
     img.setAttribute('tabindex', 0)
+    img.setAttribute('role', 'button')
+    img.setAttribute('aria-label', 'Ouvrir le media en grand dans une lightbox')
     img.classList = 'media-thumbnail'
     this._mediaCard.append(img)
   }
