@@ -3,11 +3,12 @@
  * @param {array} data Array is unstructured in constructor
  */
 export class Photographer {
-  constructor ({ id, name, city, country, tagline, price, portrait }) {
+  constructor ({ id, name, city, country, tags, tagline, price, portrait }) {
     this._id = id
     this._name = name
     this._city = city
     this._country = country
+    this._tags = tags
     this._tagline = tagline
     this._price = price
     this.portrait = portrait
@@ -43,6 +44,14 @@ export class Photographer {
 
   set country (country) {
     this._country = country
+  }
+
+  get tags () {
+    return this._tags
+  }
+
+  set tags (tags) {
+    this._tags = tags
   }
 
   get tagline () {

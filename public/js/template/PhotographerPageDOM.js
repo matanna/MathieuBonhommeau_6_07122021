@@ -23,6 +23,9 @@ export class PhotographerPageDOM {
    * Create the block title with h1, city and tagline
    */
   createTitleBlockElement () {
+    const header = document.querySelector('header')
+    header.setAttribute('aria-label', `Page du photographe ${this._photographer.name}`)
+    header.focus()
     // Create titleBlock element
     const titleBlock = document.createElement('div')
     titleBlock.classList = 'photographer-title-block'
@@ -42,10 +45,22 @@ export class PhotographerPageDOM {
     tagline.textContent = this._photographer.tagline
     tagline.classList = 'photographer-tagline'
 
+    // Create tags elements
+    const tagsDOM = document.createElement('div')
+    tagsDOM.classList.add('tags-static')
+    this._photographer.tags.forEach((element) => {
+      const tag = document.createElement('span')
+      tag.classList.add('tag-static')
+      tag.innerHTML = element
+      tag.setAttribute('data-value', element)
+      tagsDOM.append(tag)
+    })
+
     // Build titleBlock element
     titleBlock.append(h1)
     titleBlock.append(city)
     titleBlock.append(tagline)
+    titleBlock.append(tagsDOM)
 
     this._photographerBanner.prepend(titleBlock)
   }
@@ -60,7 +75,7 @@ export class PhotographerPageDOM {
    */
   createPortraitElement () {
     const portrait = document.createElement('img')
-    portrait.setAttribute('src', `./public/assets/photographers/Photographers_ID _Photos/littles/${this._photographer.portrait}`)
+    portrait.setAttribute('src', `./public/assets/photographers/Photographers_ID_Photos/littles/${this._photographer.portrait}`)
     portrait.setAttribute('alt', this._photographer.name)
     portrait.classList = 'photographer-img'
 

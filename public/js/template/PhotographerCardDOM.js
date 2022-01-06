@@ -15,6 +15,7 @@ export class PhotographerCardDOM {
     this.createComeFromeElement()
     this.createTaglineElement()
     this.createPriceElement()
+    this.createTagsElement()
 
     this._photographerCard.className = 'photographer'
     return this._photographerCard
@@ -55,6 +56,22 @@ export class PhotographerCardDOM {
     h3.textContent = this._photographer.getComeFrom()
     h3.classList = 'photographer-origin card'
     this._photographerCard.append(h3)
+  }
+
+  /**
+   * All tags linked at a photographer
+   */
+  createTagsElement () {
+    const tagsDOM = document.createElement('div')
+    tagsDOM.classList.add('tags')
+    this._photographer.tags.forEach((element) => {
+      const tag = document.createElement('span')
+      tag.classList.add('tag')
+      tag.innerHTML = element
+      tag.setAttribute('data-value', element)
+      tagsDOM.append(tag)
+    })
+    this._photographerCard.append(tagsDOM)
   }
 
   /**

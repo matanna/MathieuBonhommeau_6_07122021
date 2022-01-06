@@ -1,0 +1,38 @@
+.tags {
+    display: flex;
+    justify-content: space-evenly;
+    width: 40%;
+    color: $secondary-text;
+    font-size: $card-city-size;
+    gap: 6px;
+}
+
+.tags-static {
+    color: $secondary-text;
+    font-size: $card-city-size;
+    display: flex;
+}
+
+.tag {
+    @include tags;
+    cursor: pointer;
+
+    &::before {
+        content: '#';
+    }
+
+    &:hover, &--selected {
+        background: $secondary-bg;
+        color: white;
+        border: 0.5px solid $secondary-bg;
+    }
+}
+
+.tag-static {
+    @include tags;
+    margin-right: 6px;
+
+    &::before {
+        content: '#';
+    }
+}
