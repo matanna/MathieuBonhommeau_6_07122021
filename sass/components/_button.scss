@@ -31,3 +31,24 @@
         }
     }
 }
+
+.delete-filter {
+    position: fixed;
+    width: 200px;
+    top: 5px;
+    left: calc(50% - 100px);
+    background-color: $modal-bg;
+    color: $black;
+    font-size: $card-city-size;
+    font-weight: bold;
+    border: none;
+    border-radius: $radius;
+    padding: 3px 5px;
+    cursor: pointer;
+    display: none;
+
+    &:hover, &:focus {
+        background-color: $primary-bg;
+        color: $white;
+    }
+}
