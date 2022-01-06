@@ -25,9 +25,10 @@ export class MediaCardDOM {
     title.setAttribute('id', `card-title-${this._media.id}`)
     title.classList = 'media-details__title'
 
-    const likes = document.createElement('p')
+    const likes = document.createElement('div')
     likes.textContent = this._media.likes
     likes.classList = 'media-details__likes'
+    likes.setAttribute('role', 'button')
     likes.setAttribute('aria-label', 'Cliquer pour ajouter un like')
     likes.setAttribute('data-likes', this._media.likes)
     likes.setAttribute('tabindex', 0)

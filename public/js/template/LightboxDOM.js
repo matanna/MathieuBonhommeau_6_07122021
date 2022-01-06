@@ -72,7 +72,7 @@ export class LightboxDOM {
   createImage () {
     const image = this._modal.querySelector('.lightbox-media')
     image.innerHTML = `
-        <img src="./public/assets/photographers/${this._photographer.name}/mediums/${this._media.image}" alt="${this._media.altText}" />
+        <img src="./public/assets/photographers/${this._photographer.name.replace(' ', '_')}/mediums/${this._media.image}" alt="${this._media.altText}" />
     `
   }
 
@@ -80,7 +80,7 @@ export class LightboxDOM {
     const video = this._modal.querySelector('.lightbox-media')
     video.innerHTML = `
         <video controls tabindex="2" aria-labelledby="media-title">
-            <source src="./public/assets/photographers/${this._photographer.name}/videos/${this._media.video}" type="video/mp4">
+            <source src="./public/assets/photographers/${this._photographer.name.replace(' ', '_')}/videos/${this._media.video}" type="video/mp4">
         </video>
     `
   }

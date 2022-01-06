@@ -7,6 +7,7 @@ export class ContactDOM {
 
     this._contactBtn = document.querySelector('.contact_button')
     this._modal = document.querySelector('.contact-modal')
+    this._modal.setAttribute('aria-labelledby', 'contact-title')
   }
 
   async build () {

@@ -5,7 +5,6 @@ import { SortMediaDOM } from '../template/SortMediaDOM.js'
  * @param {*} event
  */
 export function sortMedia (event) {
-  console.log(event)
   // Change aria-expanded attribute for true - the listbox is open
   this.setAttribute('aria-expanded', true)
   const listbox = document.querySelector('#listbox-options')
@@ -43,7 +42,7 @@ export function sortMedia (event) {
  * @param {*} event
  */
 function chooseSort (event) {
-  console.log(event)
+  console.log(this)
   event.stopPropagation()
   const sortType = this.dataset.value
   let mediaSorted
@@ -57,11 +56,13 @@ function chooseSort (event) {
     mediaSorted = Array.from(medias).sort((a, b) => b.querySelector('.media-details__likes').dataset.likes -
                                                           a.querySelector('.media-details__likes').dataset.likes)
     selectBtn.popularitySort()
+    document.querySelector('.option[data-value="popularity"]').ariaSelected = true
   }
 
   if (sortType === 'date') {
     mediaSorted = Array.from(medias).sort((a, b) => new Date(b.dataset.date) - new Date(a.dataset.date))
     selectBtn.dateSort()
+    document.querySelector('.option[data-value="date"]').ariaSelected = true
   }
 
   if (sortType === 'title') {
@@ -69,6 +70,7 @@ function chooseSort (event) {
       return a.querySelector('.media-details__title').innerHTML < b.querySelector('.media-details__title').innerHTML ? -1 : 1
     })
     selectBtn.titleSort()
+    document.querySelector('.option[data-value="title"]').ariaSelected = true
   }
 
   const mediasSection = document.querySelector('.media-section')
