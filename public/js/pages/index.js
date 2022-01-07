@@ -21,7 +21,6 @@ class Index {
 
     try {
       const photographersDatas = await this._datas.getPhotographers()
-
       const header = document.querySelector('header')
       header.focus()
 
@@ -39,6 +38,7 @@ class Index {
       // Create filter area
       const tagsDOM = document.querySelector('.tags')
       tagsDOM.setAttribute('tabindex', 0)
+      tagsDOM.setAttribute('role', 'list')
       tagsDOM.setAttribute('aria-label', 'Filtrer les photographes par tag')
 
       tags.forEach((element) => {
@@ -46,6 +46,8 @@ class Index {
         tagDOM.classList.add('tag')
         tagDOM.innerHTML = element
         tagDOM.setAttribute('data-value', element)
+        tagDOM.setAttribute('role', 'listitem')
+        tagDOM.setAttribute('lang', 'en')
         tagDOM.setAttribute('aria-label', 'tag')
         // Disable the focus on each tag for ease the keyboard navigation
         tagDOM.setAttribute('tabindex', -1)
