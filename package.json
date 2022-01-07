@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "lint": "./node_modules/.bin/eslint . --fix",
-    "sass": "sass --watch ./sass/main.scss:./public/css/style.css"
+    "sass": "sass --watch ./sass/main.scss:./public/css/style.css",
+    "sass-min-prefix": "sass ./sass/main.scss:./public/css/style.min.css --style=compressed && postcss ./public/css/style.min.css --use autoprefixer -d ./public/css"
   },
   "repository": {
     "type": "git",
