@@ -1,3 +1,6 @@
+/**
+ * Class for create a Video object with all informations retrived in the data.json
+ */
 export class Video {
   constructor ({ id, photographerId, video, title, likes, date, price, altText }) {
     this._id = id

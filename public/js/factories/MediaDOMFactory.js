@@ -1,7 +1,7 @@
 import { PhotoCardDOM } from '../template/PhotoCardDOM.js'
 import { VideoCardDOM } from '../template/VideoCardDOM.js'
 /**
- *
+ * Use a factory pattern for create an object PhotoCardDOM or VideoCardDOM
  * @param {object} data
  * @return {object} VideoCardDOM or PhotoCardDOM
  */
