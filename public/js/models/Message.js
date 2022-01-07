@@ -1,3 +1,6 @@
+/**
+ * Class for create message object when the user click on the submit button in the contact modal
+ */
 export class Message {
   constructor (firstname, lastname, email, content) {
     this._firstname = firstname

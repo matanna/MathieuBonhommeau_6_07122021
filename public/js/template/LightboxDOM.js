@@ -2,7 +2,7 @@
 import { Data } from '../datas/Data.js'
 
 /**
- * Class for build the lightbox
+ * Class for build the lightbox html
  */
 export class LightboxDOM {
   constructor (mediaId) {

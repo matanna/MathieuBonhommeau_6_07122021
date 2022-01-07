@@ -1,6 +1,9 @@
 // import datas from '../../../data/datas.json' assert { type: "json" }
 import { Data } from '../datas/Data.js'
 
+/**
+ * Class for build the contact modal html
+ */
 export class ContactDOM {
   constructor () {
     this._data = (new Data('./data/datas.json'))

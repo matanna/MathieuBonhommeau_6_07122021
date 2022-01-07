@@ -57,7 +57,13 @@
 			<div class="contact-modal"></div>
     </div>
 
-    <script type="module" src="./public/js/pages/photographer-page.js"></script>
+    <!-- Original script -->
+    <!--<script type="module" src="./public/js/pages/photographer-page.js"></script>-->
+
+    <!-- Transpiler Babel for adapt js for all browser - Load this before all scripts -->
+    <script src="./dist/polyfill.min.js"></script>
+    <!-- Script minified with webpack -->
+    <script src="./dist/photographer.min.js"></script>
     
   </body>
 </html>

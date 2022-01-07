@@ -1,3 +1,6 @@
+/**
+ * Class for create an object MediaCardDOM for display the media on page
+ */
 export class MediaCardDOM {
   constructor (media, photographer) {
     this._media = media
@@ -10,6 +13,7 @@ export class MediaCardDOM {
     this._mediaCard.setAttribute('aria-labelledby', `card-title-${this._media.id}`)
   }
 
+  // Build the card media html
   buildMediaCardDOM () {
     this.createMediaPicture()
     this.createMediaDetails()

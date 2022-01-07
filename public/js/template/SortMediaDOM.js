@@ -1,3 +1,6 @@
+/**
+ * Class for create the html for the sort button and adapt it in term of choosed element
+ */
 export class SortMediaDOM {
   constructor (sortType) {
     this._sortType = sortType
