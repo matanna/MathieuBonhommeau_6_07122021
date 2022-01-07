@@ -60,7 +60,6 @@ class PhotographerPage {
       sortBy.addEventListener('click', sortMedia)
       sortBy.addEventListener('keypress', (event) => {
         if (event.key === 'Enter') {
-          console.log(event)
           sortBy.click()
         }
       })
@@ -71,7 +70,6 @@ class PhotographerPage {
         likeBtn[i].addEventListener('click', addLike)
         // The user can use key Enter or key + on the keyboard
         likeBtn[i].addEventListener('keypress', (event) => {
-          console.log(event)
           if (event.key === 'Enter' || event.key === '+') {
             likeBtn[i].click()
           }
@@ -101,7 +99,6 @@ class PhotographerPage {
           }
           // Next media
           if (event.key === 'ArrowRight') {
-            console.log(event)
             document.querySelector('.arrow--right').click()
           }
           // Previous media
@@ -120,7 +117,6 @@ class PhotographerPage {
 
         // Keyboard navigation for the contact modal
         if (contactElement.style.display === 'block') {
-          console.log(event)
           // Block the focus in the lightbox
           if (event.key === 'Tab') {
             if (event.target === document.querySelector('#submit-btn')) {

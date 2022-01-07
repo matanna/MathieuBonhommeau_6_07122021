@@ -6,7 +6,6 @@ export class VideoCardDOM extends MediaCardDOM {
   createMediaPicture () {
     const video = document.createElement('video')
     video.classList = 'media-thumbnail'
-    video.setAttribute('controls', 'controls')
     video.setAttribute('data-id', this._media.id)
     video.setAttribute('tabindex', 0)
     video.setAttribute('aria-label', 'Ouvrir le media en grand dans une lightbox')

@@ -25,11 +25,20 @@ export function sortMedia (event) {
     element.style.pointerEvents = 'auto'
 
     // Change the value of aria-activedescendant attribute in term of option
-    element.addEventListener('focus', () => listbox.setAttribute('aria-activedescendant', element.dataset.value))
+    element.addEventListener('focus', (event) => {
+      listbox.setAttribute('aria-activedescendant', element.dataset.value)
+      console.log(event.target)
+      // Change tabindes value for keep the focus in the listbox when it is opened
+      if (event.target.getAttribute('tabindex') === '3') {
+        event.preventDefault()
+        document.querySelector('.option[tabindex="2"]').setAttribute('tabindex', 3)
+        document.querySelector('.option[tabindex="1"]').setAttribute('tabindex', 2)
+        event.target.setAttribute('tabindex', '1')
+      }
+    })
     element.addEventListener('click', chooseSort)
     element.addEventListener('keypress', (event) => {
       if (event.key === 'Enter') {
-        console.log(event)
         event.stopPropagation()
         element.click()
       }
@@ -42,7 +51,6 @@ export function sortMedia (event) {
  * @param {*} event
  */
 function chooseSort (event) {
-  console.log(this)
   event.stopPropagation()
   const sortType = this.dataset.value
   let mediaSorted
