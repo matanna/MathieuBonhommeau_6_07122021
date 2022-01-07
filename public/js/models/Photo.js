@@ -1,3 +1,6 @@
+/**
+ * Class for create a Photo object with all informations retrived in the data.json
+ */
 export class Photo {
   constructor ({ id, photographerId, title, image, likes, date, price, altText }) {
     this._id = id

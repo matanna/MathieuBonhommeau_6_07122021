@@ -13,7 +13,7 @@
     <meta property="og:image" content="Tous les photographes freelance les plus talentueux réunis au même endroit !!">
 
     <!-- Styles -->
-    <link href="./public/css/style.css" rel="stylesheet" type="text/css" />
+    <link href="./public/css/style.min.css" rel="stylesheet" type="text/css" />
 
     <!-- Favicon -->
     <link rel="icon" type="image/svg+xml" href="./public/assets/icons/camera-solid.svg">
@@ -39,6 +39,12 @@
         <div class="photographer_section"></div>
     </main>
     
-    <script type="module" src="./public/js/pages/index.js"></script>
+    <!-- Original script -->
+    <!--<script type="module" src="./public/js/pages/index.js"></script>-->
+
+    <!-- Transpiler Babel for adapt js for all browser - Load this before all scripts -->
+    <script src="./dist/polyfill.min.js"></script>
+    <!-- Script minified with webpack -->
+    <script src="./dist/index.min.js"></script>
   </body>
 </html>

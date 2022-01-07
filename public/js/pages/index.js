@@ -87,6 +87,7 @@ class Index {
         tags.forEach((element) => element.addEventListener('click', filterPhotographer))
       })
 
+      // Create a fixed button on the top of page for delete all filter when click on
       const deleteFilter = document.createElement('button')
       deleteFilter.setAttribute('type', 'button')
       deleteFilter.setAttribute('class', 'delete-filter')

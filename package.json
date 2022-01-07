@@ -4,8 +4,10 @@
   "description": "Projet 6 OC - FishEye",
   "main": "index.js",
   "scripts": {
+    "build": "webpack",
     "lint": "./node_modules/.bin/eslint . --fix",
-    "sass": "sass --watch ./sass/main.scss:./public/css/style.css"
+    "sass": "sass --watch ./sass/main.scss:./public/css/style.css",
+    "sass-min-prefix": "sass ./sass/main.scss:./public/css/style.min.css --style=compressed && postcss ./public/css/style.min.css --use autoprefixer -d ./public/css"
   },
   "repository": {
     "type": "git",
@@ -18,8 +20,12 @@
   },
   "homepage": "https://github.com/matanna/MathieuBonhommeau_6_07122021#readme",
   "devDependencies": {
+    "@babel/core": "^7.16.7",
     "@babel/plugin-syntax-import-assertions": "^7.16.5",
+    "@babel/preset-env": "^7.16.7",
     "babel-eslint": "^10.1.0",
+    "babel-loader": "^8.2.3",
+    "babel-polyfill": "^6.26.0",
     "eslint": "^7.32.0",
     "eslint-config-standard": "^16.0.3",
     "eslint-plugin-import": "^2.25.3",
