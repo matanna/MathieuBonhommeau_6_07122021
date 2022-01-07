@@ -33,8 +33,8 @@ export class PhotographerCardDOM {
 
     // Create image choosed by the photographer (in our case, it is generate in random)
     const img = document.createElement('img')
-    img.setAttribute('src', `./public/assets/photographers/Photographers_ID _Photos/littles/${this._photographer.portrait}`)
-    img.setAttribute('alt', this._photographer.name)
+    img.setAttribute('src', `./public/assets/photographers/Photographers_ID_Photos/littles/${this._photographer.portrait}`)
+    img.setAttribute('alt', 'Photo de ' + this._photographer.name)
     img.classList = 'photographer-img'
 
     // Create the title of the card - Photographer name in a h2
@@ -55,6 +55,7 @@ export class PhotographerCardDOM {
     const h3 = document.createElement('h3')
     h3.textContent = this._photographer.getComeFrom()
     h3.classList = 'photographer-origin card'
+    h3.setAttribute('lang', 'en')
     this._photographerCard.append(h3)
   }
 
@@ -69,6 +70,7 @@ export class PhotographerCardDOM {
       tag.classList.add('tag')
       tag.innerHTML = element
       tag.setAttribute('data-value', element)
+      tag.setAttribute('lang', 'en')
       tagsDOM.append(tag)
     })
     this._photographerCard.append(tagsDOM)

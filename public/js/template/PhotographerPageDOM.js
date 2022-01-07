@@ -39,6 +39,7 @@ export class PhotographerPageDOM {
     const city = document.createElement('h2')
     city.textContent = this._photographer.city
     city.classList = 'photographer-origin'
+    city.setAttribute('lang', 'en')
 
     // Create tagline element
     const tagline = document.createElement('p')
@@ -53,6 +54,7 @@ export class PhotographerPageDOM {
       tag.classList.add('tag-static')
       tag.innerHTML = element
       tag.setAttribute('data-value', element)
+      tag.setAttribute('lang', 'en')
       tagsDOM.append(tag)
     })
 
@@ -86,12 +88,13 @@ export class PhotographerPageDOM {
     const fix = document.createElement('div')
     fix.classList = 'fix'
 
-    const likes = document.createElement('p')
+    const likes = document.createElement('div')
     likes.textContent = this._photographer.totalLikes
     likes.classList = 'fix__total-likes'
     likes.setAttribute('data-total', this._photographer.totalLikes)
+    likes.setAttribute('lang', 'en')
 
-    const price = document.createElement('p')
+    const price = document.createElement('div')
     price.textContent = this._photographer.price
     price.classList = 'fix__price'
 
