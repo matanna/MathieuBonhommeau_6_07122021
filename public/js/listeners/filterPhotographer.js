@@ -44,7 +44,14 @@ export async function filterPhotographer (event) {
     photographerSection.append(photographerCard)
 
     const tags = photographerCard.querySelectorAll('.tag')
-    tags.forEach((element) => element.addEventListener('click', filterPhotographer))
+    tags.forEach((element) => {
+      element.addEventListener('click', filterPhotographer)
+      element.addEventListener('keydown', (event) => {
+        if (event.key === 'Enter') {
+          element.click()
+        }
+      })
+    })
   })
 
   // Delete filter when the user click on the bouton 'Cancel the filter'

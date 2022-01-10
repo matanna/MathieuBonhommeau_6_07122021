@@ -19,18 +19,22 @@ export class LightboxDOM {
     this._photographer = (datas.photographers.filter((value) => value.id === parseInt(this._media.photographerId)))[0]
     this._medias = datas.media.filter((value) => value.photographerId === parseInt(this._photographer.id))
 
+    // Retrieve cards in the DOM for find the next and previous media. This order change in terms of sort choosed
+    this._mediasDOM = document.querySelectorAll('.media-card')
+    const currentMediaKey = Array.from(this._mediasDOM).findIndex((element) => element.dataset.id === this._mediaId)
+
     // Get key of current media and retrieve previous id media and next id media. We put them in a data-id attribute for next and previeous arrow
-    let nextkey = this._medias.indexOf(this._media) + 1
+    let nextkey = currentMediaKey + 1
     if (nextkey > this._medias.length - 1) {
       nextkey = 0
     }
-    this._nextMediaId = this._medias[nextkey].id
+    this._nextMediaId = this._mediasDOM[nextkey].dataset.id
 
-    let prevkey = this._medias.indexOf(this._media) - 1
+    let prevkey = currentMediaKey - 1
     if (prevkey < 0) {
       prevkey = this._medias.length - 1
     }
-    this._prevMediaId = this._medias[prevkey].id
+    this._prevMediaId = this._mediasDOM[prevkey].dataset.id
 
     // Add data-id attribute at the open lightbox for retrieve the focus on this media when user press Escape key for close it
     document.querySelector('#lightbox').setAttribute('data-id', this._media.id)

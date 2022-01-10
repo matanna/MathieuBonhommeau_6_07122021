@@ -18,6 +18,8 @@ export class PhotographerCardDOM {
     this.createTagsElement()
 
     this._photographerCard.className = 'photographer'
+    this._photographerCard.setAttribute('tabindex', 0)
+    this._photographerCard.setAttribute('aria-describedby', `title-${this._photographer._id}`)
     return this._photographerCard
   }
 
@@ -41,6 +43,7 @@ export class PhotographerCardDOM {
     const h2 = document.createElement('h2')
     h2.textContent = this._photographer.name
     h2.classList = 'photographer-title card'
+    h2.setAttribute('id', `title-${this._photographer._id}`)
 
     // Build the card link
     a.append(img)
@@ -65,11 +68,16 @@ export class PhotographerCardDOM {
   createTagsElement () {
     const tagsDOM = document.createElement('div')
     tagsDOM.classList.add('tags')
+    tagsDOM.setAttribute('role', 'list')
+    tagsDOM.setAttribute('data-value', this._photographer.id)
     this._photographer.tags.forEach((element) => {
       const tag = document.createElement('span')
       tag.classList.add('tag')
       tag.innerHTML = element
       tag.setAttribute('data-value', element)
+      tag.setAttribute('data-place', 'card')
+      tag.setAttribute('tabindex', 0)
+      tag.setAttribute('role', 'listitem')
       tag.setAttribute('lang', 'en')
       tagsDOM.append(tag)
     })

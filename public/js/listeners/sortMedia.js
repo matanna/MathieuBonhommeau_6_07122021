@@ -27,7 +27,6 @@ export function sortMedia (event) {
     // Change the value of aria-activedescendant attribute in term of option
     element.addEventListener('focus', (event) => {
       listbox.setAttribute('aria-activedescendant', element.dataset.value)
-      console.log(event.target)
       // Change tabindes value for keep the focus in the listbox when it is opened
       if (event.target.getAttribute('tabindex') === '3') {
         event.preventDefault()

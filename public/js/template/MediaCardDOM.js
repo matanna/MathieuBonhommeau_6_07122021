@@ -10,6 +10,7 @@ export class MediaCardDOM {
     this._mediaCard.classList = 'media-card'
     this._mediaCard.setAttribute('data-date', this._media.date)
     this._mediaCard.setAttribute('tabindex', 0)
+    this._mediaCard.setAttribute('data-id', this._media.id)
     this._mediaCard.setAttribute('aria-labelledby', `card-title-${this._media.id}`)
   }
 

@@ -46,6 +46,7 @@ class Index {
         tagDOM.classList.add('tag')
         tagDOM.innerHTML = element
         tagDOM.setAttribute('data-value', element)
+        tagDOM.setAttribute('data-place', 'banner')
         tagDOM.setAttribute('role', 'listitem')
         tagDOM.setAttribute('lang', 'en')
         tagDOM.setAttribute('aria-label', 'tag')
@@ -65,15 +66,25 @@ class Index {
             tagsDOM.focus()
           }
         })
-        tagDOM.addEventListener('focus', () => {
+        tagDOM.addEventListener('focus', (event) => {
           tagsDOM.setAttribute('aria-activedescendant', element)
+          // Update tabindex attribute so that the focus stay in the filter
+          if (event.target.getAttribute('tabindex') === tags.length.toString()) {
+            document.querySelectorAll('.tag[data-place="banner"]').forEach((element) => {
+              element.setAttribute('tabindex', parseInt(element.getAttribute('tabindex')) + 1)
+              if (parseInt(element.getAttribute('tabindex')) === tags.length + 1) {
+                element.setAttribute('tabindex', 1)
+              }
+            })
+          }
         })
       })
       // Enable the focus in the filter area
       tagsDOM.addEventListener('keydown', (event) => {
         if (event.key === 'Enter') {
-          document.querySelector('.tag').focus()
-          document.querySelectorAll('.tag').forEach((element) => element.setAttribute('tabindex', 1))
+          let i = 1
+          document.querySelector('.tag[data-place="banner"]').focus()
+          document.querySelectorAll('.tag[data-place="banner"]').forEach((element) => element.setAttribute('tabindex', i++))
         }
       })
 
@@ -83,8 +94,15 @@ class Index {
         const photographerCardDOM = new PhotographerCardDOM(photographer).buildPhotographerCardDOM()
         photographersSection.appendChild(photographerCardDOM)
 
-        const tags = photographerCardDOM.querySelectorAll('.tag')
-        tags.forEach((element) => element.addEventListener('click', filterPhotographer))
+        const tags = photographerCardDOM.querySelectorAll('.tag[data-place="card"]')
+        tags.forEach((element) => {
+          element.addEventListener('click', filterPhotographer)
+          element.addEventListener('keydown', (event) => {
+            if (event.key === 'Enter') {
+              element.click()
+            }
+          })
+        })
       })
 
       // Create a fixed button on the top of page for delete all filter when click on
@@ -92,6 +110,7 @@ class Index {
       deleteFilter.setAttribute('type', 'button')
       deleteFilter.setAttribute('class', 'delete-filter')
       deleteFilter.setAttribute('aria-label', 'Supprimer les filtres')
+      deleteFilter.setAttribute('tabindex', 0)
       deleteFilter.innerHTML = 'Annuler les filtres'
       document.querySelector('body').append(deleteFilter)
     } catch (error) {

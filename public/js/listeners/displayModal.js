@@ -84,7 +84,6 @@ function closeModal (event) {
     // Focus is placed on the media which is just visited
     document.querySelector(`.media-thumbnail[data-id="${this.dataset.id}"]`).focus()
     modal.querySelectorAll('*[tabindex]').forEach((element) => element.setAttribute('tabindex', 0))
-    console.log(modal.querySelectorAll('*[tabindex]'))
   }
 
   if (this.dataset.name === 'contact') {
@@ -94,7 +93,6 @@ function closeModal (event) {
     // Focus is placed on the contact button
     document.querySelector('.contact_button').focus()
     modal.querySelectorAll('*[tabindex]').forEach((element) => element.setAttribute('tabindex', 0))
-    console.log(modal.querySelectorAll('*[tabindex]'))
   }
 }
 
