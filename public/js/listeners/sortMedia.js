@@ -83,6 +83,15 @@ function chooseSort (event) {
   const mediasSection = document.querySelector('.media-section')
   mediaSorted.forEach((element) => mediasSection.append(element))
 
+  const likeBtn = document.getElementsByClassName('media-details__likes')
+  for (let i = 0; i < likeBtn.length; i++) {
+    likeBtn[i].addEventListener('keypress', (event) => {
+      if (event.key === 'Enter' || event.key === '+') {
+        likeBtn[i].click()
+      }
+    })
+  }
+
   /**
    * Close the listbox and show the active sort on the sort button
    */
